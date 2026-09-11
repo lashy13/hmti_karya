@@ -7,7 +7,7 @@ function Contact(){
   <div className="contact-glow"></div>
 
   <div className="section-label">
-    <span>07</span>
+    <span>05</span>
     GET IN TOUCH
   </div>
 

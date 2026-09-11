@@ -181,10 +181,7 @@ function AboutHmti() {
 
       <section className="about-hmti-section" id="about-hmti">
 
-        <div className="section-label">
-          <span>03</span>
-          ABOUT HMTI
-        </div>
+       
 
         <div className="about-hmti-header">
 
@@ -219,10 +216,6 @@ function AboutHmti() {
 
         {/* BIG STATEMENT */}
         <div className="about-statement">
-
-          <span className="statement-number">
-            01
-          </span>
 
           <h3>
             CONNECT.
