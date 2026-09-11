@@ -1,0 +1,653 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: calc(100vh - 90px);
+
+  padding: 0 6%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.hero-content {
+  width: 46%;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,0.5);
+
+  margin-bottom: 28px;
+}
+
+.eyebrow span {
+  width: 28px;
+
+  height: 1px;
+
+  background: #4c8dff;
+}
+
+.hero h1 {
+  font-size: clamp(60px, 7vw, 110px);
+
+  line-height: 0.84;
+
+  letter-spacing: -6px;
+
+  margin: 0;
+
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255,255,255,0.7);
+
+  /* EFEK CAHAYA BERJALAN */
+  background:
+    linear-gradient(
+      90deg,
+      transparent 20%,
+      #1683ff 40%,
+      #00d9ff 50%,
+      #1683ff 60%,
+      transparent 80%
+    );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.hero-content > p {
+  max-width: 450px;
+
+  margin-top: 35px;
+
+  color: rgba(255,255,255,0.5);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 14px 22px;
+
+  border-radius: 100px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.primary-button {
+  border: none;
+
+  background: white;
+
+  color: #050816;
+
+  /* EFEK BERDENYUT */
+  animation: pulse-button 2s infinite;
+}
+
+@keyframes pulse-button {
+  0% {
+    box-shadow:
+      0 0 0 0
+      rgba(255, 255, 255, 0.6);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 15px
+      rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0
+      rgba(255, 255, 255, 0);
+  }
+}
+
+.primary-button span {
+  margin-left: 10px;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 40px
+    rgba(255,255,255,0.15);
+}
+
+.secondary-button {
+  background: transparent;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.2);
+
+  color: white;
+}
+
+.secondary-button:hover {
+  background:
+    rgba(255,255,255,0.08);
+}
+
+
+/* =========================
+   LOGO SCENE
+========================= */
+
+.logo-scene {
+  width: 52%;
+
+  height: 650px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.outer-ring {
+  position: absolute;
+
+  width: 420px;
+
+  height: 420px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 0 80px
+    rgba(40,100,255,0.08),
+
+    inset 0 0 80px
+    rgba(40,100,255,0.04);
+}
+
+.outer-ring::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 25px;
+
+  border-radius: 50%;
+
+  border:
+    1px dashed
+    rgba(255,255,255,0.12);
+}
+
+
+/* =========================
+   ROTATING TEXT
+========================= */
+
+.rotating-text {
+  position: absolute;
+
+  width: 520px;
+
+  height: 520px;
+
+  animation:
+    rotateText 25s linear infinite;
+}
+
+.rotating-text svg {
+  width: 100%;
+
+  height: 100%;
+}
+
+.rotating-text text {
+  fill: rgba(255,255,255,0.5);
+
+  font-size: 13px;
+
+  letter-spacing: 6px;
+}
+
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-wrapper {
+  position: relative;
+
+  z-index: 5;
+}
+
+.logo-card {
+  width: 245px;
+
+  height: 245px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #08132d;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.18);
+
+  box-shadow:
+    0 0 50px
+    rgba(0,120,255,0.2),
+
+    0 0 120px
+    rgba(0,120,255,0.12);
+}
+
+.logo-card img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.logo-glow {
+  position: absolute;
+
+  inset: -30px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0,110,255,0.15);
+
+  filter: blur(45px);
+
+  z-index: -1;
+}
+
+
+/* =========================
+   ORBITS
+========================= */
+
+.orbit {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+.orbit-one {
+  width: 510px;
+
+  height: 180px;
+
+  animation:
+    spin-orbit1
+    20s linear infinite;
+}
+
+.orbit-two {
+  width: 510px;
+
+  height: 180px;
+
+  animation:
+    spin-orbit2
+    25s linear infinite;
+}
+
+@keyframes spin-orbit1 {
+  0% {
+    transform: rotate(-30deg);
+  }
+
+  100% {
+    transform: rotate(330deg);
+  }
+}
+
+@keyframes spin-orbit2 {
+  0% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(390deg);
+  }
+}
+
+
+/* =========================
+   FLOATING DOTS
+========================= */
+
+.floating-dot {
+  position: absolute;
+
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #4c8dff;
+
+  box-shadow:
+    0 0 20px #4c8dff;
+}
+
+.dot-one {
+  top: 100px;
+
+  right: 90px;
+}
+
+.dot-two {
+  bottom: 120px;
+
+  left: 80px;
+
+  background: #00e5ff;
+
+  box-shadow:
+    0 0 20px #00e5ff;
+}
+
+.dot-three {
+  top: 170px;
+
+  left: 80px;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.hero-bottom {
+  position: absolute;
+
+  bottom: 35px;
+
+  left: 6%;
+
+  right: 6%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  z-index: 5;
+}
+
+.hero-bottom > div:first-child {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+.hero-bottom span {
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: rgba(255,255,255,0.35);
+}
+
+.hero-bottom p {
+  font-size: 9px;
+
+  line-height: 1.6;
+
+  letter-spacing: 1px;
+
+  color: rgba(255,255,255,0.4);
+}
+
+.scroll-indicator {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.scroll-line {
+  width: 1px;
+
+  height: 35px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.5),
+      transparent
+    );
+}
+
+.year {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.year strong {
+  font-size: 18px;
+
+  letter-spacing: 2px;
+
+  color: white;
+}
+
+.logo-caption {
+  position: absolute;
+
+  bottom: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  z-index: 10;
+}
+
+.logo-caption span {
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,0.4);
+}
+
+.logo-caption strong {
+  margin-top: 5px;
+
+  font-size: 14px;
+
+  letter-spacing: 3px;
+
+  color: #1683ff;
+}
+
+.logo-caption small {
+  margin-top: 5px;
+
+  font-size: 7px;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(255,255,255,0.3);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding-top: 50px;
+
+    padding-bottom: 120px;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .eyebrow {
+    justify-content: center;
+  }
+
+  .hero-content > p {
+    max-width: 500px;
+  }
+
+  .logo-scene {
+    width: 100%;
+
+    height: 500px;
+  }
+
+  .hero-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .hero {
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+
+    letter-spacing: -4px;
+  }
+
+  .logo-scene {
+    transform: scale(0.75);
+
+    margin-top: -30px;
+
+    margin-bottom: -50px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+}

@@ -85,19 +85,21 @@ function Footer(){
 
   </div>
 
-  <div className="footer-big-text">
-
+<div className="footer-big-text">
+  <div className="footer-big-track">
     <span>SMART</span>
-
     <i>•</i>
-
     <span>CREATIVE</span>
-
     <i>•</i>
-
     <span>PROGRESSIVE</span>
 
+    <span>SMART</span>
+    <i>•</i>
+    <span>CREATIVE</span>
+    <i>•</i>
+    <span>PROGRESSIVE</span>
   </div>
+</div>
 
   <div className="footer-bottom">
 

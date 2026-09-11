@@ -1,0 +1,520 @@
+/* =========================
+   HMTI SECTION
+========================= */
+
+.hmti-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 150px 6%;
+
+  background:
+    radial-gradient(
+      circle at 20% 60%,
+      rgba(0, 100, 255, 0.08),
+      transparent 35%
+    );
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.06);
+}
+
+.hmti-header {
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.8fr;
+
+  gap: 120px;
+
+  align-items: end;
+
+  margin-bottom: 100px;
+}
+
+.hmti-mini {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+
+  color: #1683ff;
+}
+
+.hmti-title h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      70px,
+      8vw,
+      120px
+    );
+
+  line-height: 0.8;
+
+  letter-spacing: -7px;
+
+  font-weight: 800;
+}
+
+.hmti-title h2 span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px
+    rgba(255,255,255,0.7);
+}
+
+.hmti-description {
+  max-width: 430px;
+}
+
+.hmti-description p {
+  margin: 0 0 25px;
+
+  color:
+    rgba(255,255,255,0.5);
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================
+   HMTI INFO GRID
+========================= */
+
+.hmti-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr;
+
+  gap: 14px;
+}
+
+.hmti-info-card {
+  position: relative;
+
+  min-height: 310px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.015)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  border-radius: 5px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s,
+    border-color 0.4s,
+    background 0.4s;
+}
+
+.hmti-info-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 200px;
+
+  height: 200px;
+
+  right: -100px;
+
+  bottom: -100px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22,131,255,0.14);
+
+  filter: blur(50px);
+
+  transition: 0.5s;
+}
+
+.hmti-info-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(22,131,255,0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22,131,255,0.1),
+      rgba(255,255,255,0.02)
+    );
+}
+
+.hmti-info-card:hover::before {
+  transform: scale(1.4);
+}
+
+.hmti-info-card.large {
+  grid-row: span 1;
+}
+
+.info-number {
+  position: absolute;
+
+  top: 25px;
+
+  right: 28px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(255,255,255,0.25);
+}
+
+.info-label {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  color:
+    rgba(255,255,255,0.35);
+}
+
+.hmti-info-card h3 {
+  margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+}
+
+.hmti-info-card h3 span {
+  color: #1683ff;
+}
+
+.hmti-info-card p {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 300px;
+
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.4);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+.info-symbol {
+  font-size: 40px;
+
+  color: #1683ff;
+
+  text-shadow:
+    0 0 30px
+    rgba(22,131,255,0.5);
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   HMTI RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .hmti-header {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .hmti-info-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hmti-section {
+    padding: 100px 20px;
+  }
+
+  .hmti-header {
+    margin-bottom: 60px;
+  }
+
+  .hmti-title h2 {
+    font-size: 65px;
+
+    letter-spacing: -4px;
+  }
+
+  .hmti-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hmti-info-card {
+    min-height: 260px;
+  }
+
+}
+/* =========================
+   ABOUT HMTI
+========================= */
+
+.about-hmti-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 150px 6%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 75% 30%,
+      rgba(22, 131, 255, 0.07),
+      transparent 35%
+    );
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+.about-hmti-header {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 100px;
+  align-items: end;
+  margin-bottom: 110px;
+}
+
+.about-mini {
+  display: block;
+  margin-bottom: 20px;
+  color: #1683ff;
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+.about-hmti-title h2 {
+  margin: 0;
+  font-size: clamp(55px, 7vw, 100px);
+  line-height: 0.82;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+.about-hmti-title h2 span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+}
+
+.about-hmti-intro {
+  max-width: 400px;
+}
+
+.about-hmti-intro p {
+  margin: 0 0 25px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.about-accent-line {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 15px;
+  background:
+    linear-gradient(
+      to right,
+      #1683ff,
+      transparent
+    );
+}
+
+.about-hmti-intro > span {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 7px;
+  letter-spacing: 3px;
+}
+
+.about-statement {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.15fr 1fr 0.6fr;
+  gap: 30px;
+  align-items: end;
+  padding: 60px 0;
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.08);
+}
+
+.statement-number {
+  align-self: start;
+  color: #1683ff;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.about-statement h3 {
+  margin: 0;
+  font-size: clamp(60px, 8vw, 115px);
+  line-height: 0.78;
+  letter-spacing: -8px;
+  font-weight: 800;
+}
+
+.about-statement h3 span {
+  color: #1683ff;
+}
+
+.about-statement > p {
+  max-width: 350px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 80px;
+}
+
+.about-value {
+  position: relative;
+  padding: 30px;
+  min-height: 220px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid
+    rgba(255, 255, 255, 0.07);
+  transition:
+    border-color 0.3s,
+    background 0.3s;
+}
+
+.about-value:hover {
+  border-color: rgba(22, 131, 255, 0.35);
+  background: rgba(22, 131, 255, 0.05);
+}
+
+.about-value > span {
+  color: #1683ff;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.about-value h4 {
+  margin: 45px 0 12px;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.about-value p {
+  max-width: 280px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.about-hmti-bottom {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 60px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.about-hmti-bottom div {
+  flex: 1;
+  height: 1px;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+}
+
+@media (max-width: 900px) {
+  .about-hmti-header {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-statement {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hmti-section {
+    padding: 100px 20px;
+  }
+
+  .about-hmti-title h2 {
+    font-size: 52px;
+    letter-spacing: -4px;
+  }
+
+  .about-statement h3 {
+    font-size: 65px;
+    letter-spacing: -5px;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+
+  .about-value {
+    min-height: 190px;
+  }
+}

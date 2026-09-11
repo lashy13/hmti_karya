@@ -1,0 +1,763 @@
+/* =========================
+   DIVISIONS SECTION
+========================= */
+
+.divisions-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 150px 6%;
+
+  background:
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(22,131,255,0.07),
+      transparent 35%
+    );
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.06);
+}
+
+.divisions-header {
+  display: grid;
+
+  grid-template-columns:
+    1fr 0.7fr;
+
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 80px;
+}
+
+.division-mini {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #1683ff;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+}
+
+.divisions-header h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      55px,
+      6vw,
+      90px
+    );
+
+  line-height: 0.88;
+
+  letter-spacing: -5px;
+
+  font-weight: 800;
+}
+
+.divisions-header h2 span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px
+    rgba(255,255,255,0.65);
+}
+
+.divisions-header > p {
+  max-width: 390px;
+
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.45);
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================
+   DIVISION GRID
+========================= */
+
+.divisions-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.division-card {
+  position: relative;
+
+  min-height: 430px;
+
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.065),
+      rgba(255,255,255,0.015)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  border-radius: 5px;
+
+  transition:
+    border-color 0.4s,
+    background 0.4s;
+
+  cursor: pointer;
+}
+
+.division-content {
+  margin-top: 90px;
+}
+
+.division-bottom {
+  margin-top: auto;
+}
+
+.division-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+
+  height: 220px;
+
+  right: -110px;
+
+  bottom: -110px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22,131,255,0.14);
+
+  filter: blur(60px);
+
+  transition: 0.5s;
+}
+
+.division-card:hover {
+  border-color:
+    rgba(22,131,255,0.4);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22,131,255,0.1),
+      rgba(255,255,255,0.02)
+    );
+}
+
+.division-card:hover::before {
+  transform: scale(1.5);
+}
+
+
+/* FEATURED */
+
+.division-featured {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22,131,255,0.12),
+      rgba(255,255,255,0.025)
+    );
+
+  border-color:
+    rgba(22,131,255,0.2);
+}
+
+
+/* NUMBER */
+
+.division-number {
+  position: absolute;
+
+  top: 25px;
+
+  right: 28px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(255,255,255,0.25);
+}
+
+
+/* ICON */
+
+.division-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(22,131,255,0.3);
+
+  color: #1683ff;
+
+  font-size: 20px;
+
+  box-shadow:
+    0 0 30px
+    rgba(22,131,255,0.08);
+}
+
+
+/* CONTENT */
+
+.division-category {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 8px;
+
+  letter-spacing: 3px;
+
+  color:
+    rgba(255,255,255,0.35);
+}
+
+.division-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 32px;
+
+  letter-spacing: -1px;
+}
+
+.division-card p {
+  max-width: 240px;
+
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.4);
+
+  font-size: 11px;
+
+  line-height: 1.8;
+}
+
+
+/* ARROW */
+
+.division-arrow {
+  position: absolute;
+
+  right: 28px;
+
+  bottom: 28px;
+
+  width: 34px;
+
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.12);
+
+  border-radius: 50%;
+
+  color:
+    rgba(255,255,255,0.6);
+
+  transition: 0.3s;
+}
+
+.division-card:hover .division-arrow {
+  background: white;
+
+  color: #050816;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================
+   DIVISION FOOTER
+========================= */
+
+.division-footer {
+  margin-top: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+.division-footer > div:first-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.division-footer > div:first-child span {
+  color: #1683ff;
+
+  font-size: 11px;
+}
+
+.division-footer > div:first-child p {
+  margin: 0;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(255,255,255,0.35);
+}
+
+.division-line {
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.15),
+      transparent
+    );
+}
+
+.division-footer-text {
+  max-width: 230px;
+
+  margin: 0;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+
+  color:
+    rgba(255,255,255,0.3);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .divisions-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .divisions-header {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .divisions-section {
+    padding: 100px 20px;
+  }
+
+  .divisions-header h2 {
+    font-size: 50px;
+
+    letter-spacing: -3px;
+  }
+
+  .divisions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .division-card {
+    min-height: 360px;
+  }
+
+  .division-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .division-line {
+    width: 100%;
+  }
+
+}
+/* =========================
+   DIVISIONS SECTION
+========================= */
+
+.divisions-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 150px 6%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 40%,
+      rgba(22, 131, 255, 0.08),
+      transparent 35%
+    );
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.06);
+}
+
+.divisions-section::before {
+  content: "HMTI";
+  position: absolute;
+  right: -70px;
+  top: 25%;
+  font-size: 220px;
+  font-weight: 900;
+  letter-spacing: -15px;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.025);
+  pointer-events: none;
+}
+
+.divisions-header {
+  display: grid;
+  grid-template-columns: 1fr 0.65fr;
+  gap: 100px;
+  align-items: end;
+  margin-bottom: 80px;
+}
+
+.division-mini {
+  display: block;
+  margin-bottom: 18px;
+  color: #1683ff;
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+.divisions-header h2 {
+  margin: 0;
+  font-size: clamp(60px, 7vw, 100px);
+  line-height: 0.82;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+.divisions-header h2 span {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+}
+
+.divisions-header > p {
+  max-width: 400px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.divisions-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.division-card {
+  position: relative;
+  min-height: 420px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.065),
+      rgba(255, 255, 255, 0.012)
+    );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  transition:
+    border-color 0.4s,
+    background 0.4s;
+}
+
+.division-card::before {
+  content: "";
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: -120px;
+  bottom: -120px;
+  border-radius: 50%;
+  background: rgba(22, 131, 255, 0.14);
+  filter: blur(65px);
+  transition: 0.5s;
+}
+
+.division-card:hover {
+  border-color: rgba(22, 131, 255, 0.4);
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22, 131, 255, 0.1),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.division-card:hover::before {
+  transform: scale(1.5);
+}
+
+.division-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.division-symbol {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(22, 131, 255, 0.3);
+  color: #1683ff;
+  font-size: 20px;
+  box-shadow:
+    0 0 35px
+    rgba(22, 131, 255, 0.08);
+}
+
+.division-content {
+  position: relative;
+  z-index: 2;
+}
+
+.division-content h3 {
+  margin: 0 0 8px;
+  font-size: 38px;
+  letter-spacing: -1px;
+  font-weight: 800;
+}
+
+.division-full {
+  display: block;
+  margin-bottom: 18px;
+  color: #1683ff;
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+
+.division-content p {
+  max-width: 280px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.division-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.division-bottom span:last-child {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.division-card:hover .division-bottom span:last-child {
+  background: white;
+  color: #050816;
+  transform: rotate(45deg);
+}
+
+.ristek-card {
+  border-color: rgba(22, 131, 255, 0.18);
+}
+
+.ristek-programs {
+  display: flex;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.ristek-program {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 9px 12px;
+  border: 1px solid rgba(22, 131, 255, 0.18);
+  background: rgba(22, 131, 255, 0.04);
+}
+
+.ristek-program span {
+  color: white;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.ristek-program small {
+  color: #1683ff;
+  font-size: 6px;
+  letter-spacing: 2px;
+}
+
+.division-footer {
+  position: relative;
+  z-index: 2;
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.division-counter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.division-counter strong {
+  color: #1683ff;
+  font-size: 25px;
+}
+
+.division-counter span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 7px;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+.division-footer-line {
+  flex: 1;
+  height: 1px;
+  background:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+}
+
+.division-footer-text {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1000px) {
+  .divisions-header {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .divisions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .divisions-section {
+    padding: 100px 20px;
+  }
+
+  .divisions-header h2 {
+    font-size: 55px;
+    letter-spacing: -4px;
+  }
+
+  .divisions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .division-card {
+    min-height: 380px;
+  }
+
+  .division-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .division-footer-line {
+    width: 100%;
+  }
+}

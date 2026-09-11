@@ -1,0 +1,289 @@
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 140px 6%;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(30, 100, 255, 0.08),
+      transparent 35%
+    );
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.06);
+}
+
+.section-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,0.4);
+
+  margin-bottom: 70px;
+}
+
+.section-label span {
+  color: #1683ff;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+.about-header {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr 0.8fr;
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+.about-header h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      50px,
+      6vw,
+      90px
+    );
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+
+  font-weight: 800;
+}
+
+.about-header h2 span {
+  color: #1683ff;
+}
+
+.about-description {
+  display: flex;
+
+  gap: 20px;
+
+  max-width: 420px;
+}
+
+.description-line {
+  width: 1px;
+
+  min-width: 1px;
+
+  height: 100px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #1683ff,
+      transparent
+    );
+}
+
+.about-description p {
+  margin: 0 0 20px;
+
+  color: rgba(255,255,255,0.5);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   INFORMATICS CARDS
+========================= */
+
+.informatics-grid {
+  margin-top: 100px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.informatics-card {
+  position: relative;
+
+  min-height: 280px;
+
+  padding: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.02)
+    );
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.3s,
+    background 0.3s;
+}
+
+.informatics-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+
+  height: 150px;
+
+  right: -80px;
+
+  bottom: -80px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(22,131,255,0.15);
+
+  filter: blur(40px);
+
+  transition: 0.4s;
+}
+
+.informatics-card:hover {
+  border-color:
+    rgba(22,131,255,0.4);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22,131,255,0.1),
+      rgba(255,255,255,0.02)
+    );
+}
+
+.informatics-card:hover::before {
+  transform: scale(1.5);
+}
+
+.informatics-card > span {
+  position: absolute;
+
+  top: 25px;
+
+  right: 25px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(255,255,255,0.25);
+}
+
+.card-icon {
+  margin-top: 35px;
+
+  margin-bottom: 45px;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  color: #1683ff;
+
+  text-shadow:
+    0 0 25px
+    rgba(22,131,255,0.5);
+}
+
+.informatics-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+.informatics-card p {
+  margin: 0;
+
+  max-width: 230px;
+
+  color:
+    rgba(255,255,255,0.4);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   ABOUT RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .about-header {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .informatics-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .about-section {
+    padding: 100px 20px;
+  }
+
+  .about-header h2 {
+    font-size: 48px;
+
+    letter-spacing: -3px;
+  }
+
+  .informatics-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 60px;
+  }
+
+  .informatics-card {
+    min-height: 240px;
+  }
+
+}
