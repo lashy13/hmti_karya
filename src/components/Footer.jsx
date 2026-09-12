@@ -64,12 +64,12 @@ function Footer(){
         rel="noopener noreferrer"
       >
         Instagram
-        <span>↗</span>
+      
       </a>
 
       <a href="mailto:hmti@ump.ac.id">
         Email
-        <span>↗</span>
+    
       </a>
 
       <a
@@ -78,7 +78,7 @@ function Footer(){
         rel="noopener noreferrer"
       >
         HMTI UMP
-        <span>↗</span>
+      
       </a>
 
     </div>

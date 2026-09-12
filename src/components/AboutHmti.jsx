@@ -148,7 +148,7 @@ function AboutHmti() {
             <span className="info-number">04</span>
 
             <div className="info-symbol">
-              ↗
+              ⚖
             </div>
 
             <span className="info-label">
