@@ -36,7 +36,6 @@ function Navbar(){
           }}
         >
           HMTI
-          <span>↗</span>
         </button>
       </nav> 
     );
