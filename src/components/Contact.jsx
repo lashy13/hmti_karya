@@ -48,7 +48,7 @@ function Contact(){
             @HMTIFTSUMP
           </strong>
 
-          <b>↗</b>
+          
         </a>
 
 
@@ -64,7 +64,7 @@ function Contact(){
             HMTI@UMP.AC.ID
           </strong>
 
-          <b>↗</b>
+          
         </a>
 
 
@@ -82,7 +82,7 @@ function Contact(){
             UMP • PURWOKERTO
           </strong>
 
-          <b>↗</b>
+         
         </a>
 
       </div>
