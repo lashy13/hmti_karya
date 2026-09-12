@@ -6,11 +6,6 @@ function Contact(){
 
   <div className="contact-glow"></div>
 
-  <div className="section-label">
-    <span>05</span>
-    GET IN TOUCH
-  </div>
-
   <div className="contact-content">
 
     <div className="contact-title">

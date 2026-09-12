@@ -7,11 +7,6 @@ function Divisions() {
           SECTION LABEL
       ========================= */}
 
-      <div className="section-label">
-        <span>04</span>
-        HMTI DIVISIONS
-      </div>
-
       {/* =========================
           HEADER
       ========================= */}

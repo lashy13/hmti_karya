@@ -54,11 +54,6 @@ function AboutInformatics() {
   return (
     <section className="about-section" id="about">
       {/* Section Label */}
-      <div className="section-label">
-        <span>02</span>
-        <span>ABOUT INFORMATICS</span>
-      </div>
-
       {/* Header Content */}
       <div className="about-header">
         <motion.h2

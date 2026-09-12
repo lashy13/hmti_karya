@@ -7,10 +7,7 @@ function AboutHmti() {
           HMTI SECTION
       ========================= */}
       <section className="hmti-section" id="hmti">
-        <div className="section-label">
-          <span>03</span>
-          ABOUT HMTI
-        </div>
+        
 
         <div className="hmti-header">
           <div className="hmti-title">
