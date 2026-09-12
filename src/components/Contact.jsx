@@ -113,12 +113,6 @@ function Contact(){
 
     </div>
 
-
-    <div className="contact-bottom-center">
-      HMTI • 2026
-    </div>
-
-
   </div>
 
 </section>
