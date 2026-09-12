@@ -3,15 +3,16 @@ import { motion } from "framer-motion";
 function AboutHmti() {
   return (
     <>
+      {/* =========================
+          HMTI SECTION
+      ========================= */}
       <section className="hmti-section" id="hmti">
-
         <div className="section-label">
           <span>03</span>
           ABOUT HMTI
         </div>
 
         <div className="hmti-header">
-
           <div className="hmti-title">
             <span className="hmti-mini">
               HIMPUNAN MAHASISWA
@@ -39,12 +40,13 @@ function AboutHmti() {
               kegiatan yang memberikan dampak bagi mahasiswa.
             </p>
           </div>
-
         </div>
 
-        {/* HMTI INFO */}
+        {/* =========================
+            HMTI INFO
+        ========================= */}
         <div className="hmti-info-grid">
-
+          {/* INFO 01 */}
           <motion.div
             className="hmti-info-card large"
             initial={{ opacity: 0, y: 30 }}
@@ -52,9 +54,7 @@ function AboutHmti() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="info-number">
-              01
-            </span>
+            <span className="info-number">01</span>
 
             <div>
               <span className="info-label">
@@ -75,6 +75,7 @@ function AboutHmti() {
             </p>
           </motion.div>
 
+          {/* INFO 02 */}
           <motion.div
             className="hmti-info-card"
             initial={{ opacity: 0, y: 30 }}
@@ -85,9 +86,7 @@ function AboutHmti() {
               delay: 0.1,
             }}
           >
-            <span className="info-number">
-              02
-            </span>
+            <span className="info-number">02</span>
 
             <div className="info-symbol">
               ✦
@@ -107,6 +106,7 @@ function AboutHmti() {
             </p>
           </motion.div>
 
+          {/* INFO 03 */}
           <motion.div
             className="hmti-info-card"
             initial={{ opacity: 0, y: 30 }}
@@ -117,9 +117,7 @@ function AboutHmti() {
               delay: 0.2,
             }}
           >
-            <span className="info-number">
-              03
-            </span>
+            <span className="info-number">03</span>
 
             <div className="info-symbol">
               ◇
@@ -139,6 +137,7 @@ function AboutHmti() {
             </p>
           </motion.div>
 
+          {/* INFO 04 */}
           <motion.div
             className="hmti-info-card"
             initial={{ opacity: 0, y: 30 }}
@@ -149,9 +148,7 @@ function AboutHmti() {
               delay: 0.3,
             }}
           >
-            <span className="info-number">
-              04
-            </span>
+            <span className="info-number">04</span>
 
             <div className="info-symbol">
               ↗
@@ -170,21 +167,17 @@ function AboutHmti() {
               pemanfaatan teknologi.
             </p>
           </motion.div>
-
         </div>
-
       </section>
 
       {/* =========================
           ABOUT HMTI SECTION
       ========================= */}
-
-      <section className="about-hmti-section" id="about-hmti">
-
-       
-
+      <section
+        className="about-hmti-section"
+        id="about-hmti"
+      >
         <div className="about-hmti-header">
-
           <div className="about-hmti-title">
             <span className="about-mini">
               HIMPUNAN MAHASISWA TEKNIK INFORMATIKA
@@ -211,12 +204,12 @@ function AboutHmti() {
               UNIVERSITAS MUHAMMADIYAH PURWOKERTO
             </span>
           </div>
-
         </div>
 
-        {/* BIG STATEMENT */}
+        {/* =========================
+            BIG STATEMENT
+        ========================= */}
         <div className="about-statement">
-
           <h3>
             CONNECT.
             <br />
@@ -231,12 +224,12 @@ function AboutHmti() {
             mahasiswa saling terhubung, bertukar ide,
             membangun pengalaman, dan tumbuh bersama.
           </p>
-
         </div>
 
-        {/* VALUES */}
+        {/* =========================
+            VALUES
+        ========================= */}
         <div className="about-values">
-
           {/* VALUE 01 */}
           <motion.div
             className="about-value"
@@ -290,12 +283,12 @@ function AboutHmti() {
               menghadapi masa depan.
             </p>
           </motion.div>
-
         </div>
 
-        {/* BOTTOM */}
+        {/* =========================
+            BOTTOM
+        ========================= */}
         <div className="about-hmti-bottom">
-
           <span>
             HMTI UMP
           </span>
@@ -305,9 +298,7 @@ function AboutHmti() {
           <span>
             EST. 2026
           </span>
-
         </div>
-
       </section>
     </>
   );

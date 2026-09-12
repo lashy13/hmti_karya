@@ -4,9 +4,7 @@
 
 .hmti-section {
   position: relative;
-
   min-height: 100vh;
-
   padding: 150px 6%;
 
   background:
@@ -16,19 +14,13 @@
       transparent 35%
     );
 
-  border-top:
-    1px solid
-    rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .hmti-header {
   display: grid;
-
-  grid-template-columns:
-    1fr 0.8fr;
-
+  grid-template-columns: 1fr 0.8fr;
   gap: 120px;
-
   align-items: end;
 
   margin-bottom: 100px;
@@ -36,39 +28,26 @@
 
 .hmti-mini {
   display: block;
-
   margin-bottom: 20px;
 
   font-size: 9px;
-
   letter-spacing: 4px;
-
   color: #1683ff;
 }
 
 .hmti-title h2 {
   margin: 0;
 
-  font-size:
-    clamp(
-      70px,
-      8vw,
-      120px
-    );
-
+  font-size: clamp(70px, 8vw, 120px);
   line-height: 0.8;
-
   letter-spacing: -7px;
-
   font-weight: 800;
 }
 
 .hmti-title h2 span {
   color: transparent;
 
-  -webkit-text-stroke:
-    1px
-    rgba(255,255,255,0.7);
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
 }
 
 .hmti-description {
@@ -78,11 +57,8 @@
 .hmti-description p {
   margin: 0 0 25px;
 
-  color:
-    rgba(255,255,255,0.5);
-
+  color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
-
   line-height: 1.9;
 }
 
@@ -93,107 +69,162 @@
 
 .hmti-info-grid {
   display: grid;
-
-  grid-template-columns:
-    1.5fr
-    1fr
-    1fr;
-
-  gap: 14px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 18px;
 }
 
 .hmti-info-card {
   position: relative;
 
   min-height: 310px;
-
-  padding: 30px;
+  padding: 32px;
 
   display: flex;
-
   flex-direction: column;
-
   justify-content: space-between;
 
   background:
     linear-gradient(
       145deg,
-      rgba(255,255,255,0.06),
-      rgba(255,255,255,0.015)
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.012)
     );
 
-  border:
-    1px solid
-    rgba(255,255,255,0.08);
-
-  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 26px;
 
   overflow: hidden;
 
   transition:
-    transform 0.4s,
-    border-color 0.4s,
-    background 0.4s;
+    transform 0.45s ease,
+    border-color 0.45s ease,
+    background 0.45s ease,
+    box-shadow 0.45s ease;
 }
+
+/* =========================
+   CARD GLOW
+========================= */
 
 .hmti-info-card::before {
   content: "";
 
   position: absolute;
 
-  width: 200px;
-
-  height: 200px;
+  width: 220px;
+  height: 220px;
 
   right: -100px;
-
   bottom: -100px;
 
   border-radius: 50%;
 
   background:
-    rgba(22,131,255,0.14);
+    radial-gradient(
+      circle,
+      rgba(22, 131, 255, 0.18),
+      transparent 70%
+    );
 
-  filter: blur(50px);
+  filter: blur(35px);
 
-  transition: 0.5s;
+  opacity: 0.6;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
 }
 
-.hmti-info-card:hover {
-  transform: translateY(-8px);
+/* Highlight tipis di atas */
+.hmti-info-card::after {
+  content: "";
 
-  border-color:
-    rgba(22,131,255,0.35);
+  position: absolute;
+
+  top: 0;
+  left: 10%;
+
+  width: 80%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.15),
+      transparent
+    );
+
+  opacity: 0.7;
+}
+
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.hmti-info-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(22, 131, 255, 0.3);
 
   background:
     linear-gradient(
       145deg,
-      rgba(22,131,255,0.1),
-      rgba(255,255,255,0.02)
+      rgba(22, 131, 255, 0.08),
+      rgba(255, 255, 255, 0.025)
     );
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25),
+    0 0 40px rgba(22, 131, 255, 0.04);
 }
 
 .hmti-info-card:hover::before {
-  transform: scale(1.4);
+  transform: scale(1.5);
+  opacity: 1;
 }
 
+
+/* =========================
+   CARD VARIATION
+========================= */
+
 .hmti-info-card.large {
-  grid-row: span 1;
+  border-radius: 30px;
 }
+
+.hmti-info-card:nth-child(2) {
+  transform: translateY(12px);
+}
+
+.hmti-info-card:nth-child(2):hover {
+  transform: translateY(5px);
+}
+
+.hmti-info-card:nth-child(4) {
+  transform: translateY(12px);
+}
+
+.hmti-info-card:nth-child(4):hover {
+  transform: translateY(5px);
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
 
 .info-number {
   position: absolute;
 
   top: 25px;
-
   right: 28px;
 
   font-size: 9px;
-
   letter-spacing: 2px;
 
-  color:
-    rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
 }
 
 .info-label {
@@ -202,20 +233,16 @@
   margin-bottom: 15px;
 
   font-size: 8px;
-
   letter-spacing: 3px;
 
-  color:
-    rgba(255,255,255,0.35);
+  color: rgba(255, 255, 255, 0.35);
 }
 
 .hmti-info-card h3 {
   margin: 0;
 
   font-size: 34px;
-
   line-height: 1;
-
   letter-spacing: -1px;
 }
 
@@ -225,31 +252,24 @@
 
 .hmti-info-card p {
   position: relative;
-
   z-index: 2;
 
   max-width: 300px;
-
   margin: 0;
 
-  color:
-    rgba(255,255,255,0.4);
-
+  color: rgba(255, 255, 255, 0.4);
   font-size: 11px;
-
   line-height: 1.8;
 }
 
 .info-symbol {
-  font-size: 40px;
+  margin-bottom: 20px;
 
+  font-size: 40px;
   color: #1683ff;
 
   text-shadow:
-    0 0 30px
-    rgba(22,131,255,0.5);
-
-  margin-bottom: 20px;
+    0 0 30px rgba(22, 131, 255, 0.5);
 }
 
 
@@ -258,22 +278,27 @@
 ========================= */
 
 @media (max-width: 1000px) {
-
   .hmti-header {
     grid-template-columns: 1fr;
-
     gap: 50px;
   }
 
   .hmti-info-grid {
-    grid-template-columns:
-      1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
+  .hmti-info-card:nth-child(2),
+  .hmti-info-card:nth-child(4) {
+    transform: none;
+  }
+
+  .hmti-info-card:nth-child(2):hover,
+  .hmti-info-card:nth-child(4):hover {
+    transform: translateY(-7px);
+  }
 }
 
 @media (max-width: 600px) {
-
   .hmti-section {
     padding: 100px 20px;
   }
@@ -284,7 +309,6 @@
 
   .hmti-title h2 {
     font-size: 65px;
-
     letter-spacing: -4px;
   }
 
@@ -294,9 +318,21 @@
 
   .hmti-info-card {
     min-height: 260px;
+    border-radius: 22px;
   }
 
+  .hmti-info-card:nth-child(2),
+  .hmti-info-card:nth-child(4) {
+    transform: none;
+  }
+
+  .hmti-info-card:nth-child(2):hover,
+  .hmti-info-card:nth-child(4):hover {
+    transform: translateY(-6px);
+  }
 }
+
+
 /* =========================
    ABOUT HMTI
 ========================= */
@@ -305,28 +341,33 @@
   position: relative;
   min-height: 100vh;
   padding: 150px 6%;
+
   overflow: hidden;
+
   background:
     radial-gradient(
       circle at 75% 30%,
       rgba(22, 131, 255, 0.07),
       transparent 35%
     );
-  border-top: 1px solid
-    rgba(255, 255, 255, 0.06);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .about-hmti-header {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
+
   gap: 100px;
   align-items: end;
+
   margin-bottom: 110px;
 }
 
 .about-mini {
   display: block;
   margin-bottom: 20px;
+
   color: #1683ff;
   font-size: 9px;
   letter-spacing: 4px;
@@ -334,6 +375,7 @@
 
 .about-hmti-title h2 {
   margin: 0;
+
   font-size: clamp(55px, 7vw, 100px);
   line-height: 0.82;
   letter-spacing: -7px;
@@ -342,6 +384,7 @@
 
 .about-hmti-title h2 span {
   color: transparent;
+
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
 }
 
@@ -351,6 +394,7 @@
 
 .about-hmti-intro p {
   margin: 0 0 25px;
+
   color: rgba(255, 255, 255, 0.48);
   font-size: 13px;
   line-height: 1.9;
@@ -359,7 +403,9 @@
 .about-accent-line {
   width: 100%;
   height: 1px;
+
   margin-bottom: 15px;
+
   background:
     linear-gradient(
       to right,
@@ -370,25 +416,34 @@
 
 .about-hmti-intro > span {
   color: rgba(255, 255, 255, 0.25);
+
   font-size: 7px;
   letter-spacing: 3px;
 }
 
+
+/* =========================
+   BIG STATEMENT
+========================= */
+
 .about-statement {
   position: relative;
+
   display: grid;
   grid-template-columns: 0.15fr 1fr 0.6fr;
+
   gap: 30px;
   align-items: end;
+
   padding: 60px 0;
-  border-top: 1px solid
-    rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid
-    rgba(255, 255, 255, 0.08);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .statement-number {
   align-self: start;
+
   color: #1683ff;
   font-size: 10px;
   letter-spacing: 2px;
@@ -396,6 +451,7 @@
 
 .about-statement h3 {
   margin: 0;
+
   font-size: clamp(60px, 8vw, 115px);
   line-height: 0.78;
   letter-spacing: -8px;
@@ -409,61 +465,180 @@
 .about-statement > p {
   max-width: 350px;
   margin: 0;
+
   color: rgba(255, 255, 255, 0.4);
   font-size: 12px;
   line-height: 1.9;
 }
 
+
+/* =========================
+   VALUES
+========================= */
+
 .about-values {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+
+  gap: 18px;
   margin-top: 80px;
 }
 
 .about-value {
   position: relative;
-  padding: 30px;
+
   min-height: 220px;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid
-    rgba(255, 255, 255, 0.07);
+  padding: 32px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
+
+  overflow: hidden;
+
   transition:
-    border-color 0.3s,
-    background 0.3s;
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
+
+
+/* =========================
+   VALUE GLOW
+========================= */
+
+.about-value::before {
+  content: "";
+
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  right: -80px;
+  bottom: -80px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(22, 131, 255, 0.12),
+      transparent 70%
+    );
+
+  filter: blur(30px);
+
+  transition: transform 0.5s ease;
+}
+
+
+/* Highlight tipis */
+.about-value::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+
+  width: 76%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.12),
+      transparent
+    );
+}
+
+
+/* =========================
+   VALUE HOVER
+========================= */
 
 .about-value:hover {
-  border-color: rgba(22, 131, 255, 0.35);
-  background: rgba(22, 131, 255, 0.05);
+  transform: translateY(-6px);
+
+  border-color: rgba(22, 131, 255, 0.28);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22, 131, 255, 0.06),
+      rgba(255, 255, 255, 0.02)
+    );
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.2),
+    0 0 35px rgba(22, 131, 255, 0.04);
 }
 
+.about-value:hover::before {
+  transform: scale(1.5);
+}
+
+
+/* =========================
+   VALUE CONTENT
+========================= */
+
 .about-value > span {
+  position: relative;
+  z-index: 2;
+
   color: #1683ff;
+
   font-size: 9px;
   letter-spacing: 2px;
 }
 
 .about-value h4 {
+  position: relative;
+  z-index: 2;
+
   margin: 45px 0 12px;
+
   font-size: 20px;
   letter-spacing: -0.5px;
 }
 
 .about-value p {
+  position: relative;
+  z-index: 2;
+
   max-width: 280px;
   margin: 0;
+
   color: rgba(255, 255, 255, 0.35);
+
   font-size: 10px;
   line-height: 1.8;
 }
 
+
+/* =========================
+   ABOUT HMTI BOTTOM
+========================= */
+
 .about-hmti-bottom {
   display: flex;
   align-items: center;
+
   gap: 25px;
   margin-top: 60px;
+
   color: rgba(255, 255, 255, 0.25);
+
   font-size: 8px;
   letter-spacing: 3px;
 }
@@ -471,6 +646,7 @@
 .about-hmti-bottom div {
   flex: 1;
   height: 1px;
+
   background:
     linear-gradient(
       to right,
@@ -478,6 +654,11 @@
       transparent
     );
 }
+
+
+/* =========================
+   ABOUT HMTI RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
   .about-hmti-header {
@@ -516,5 +697,6 @@
 
   .about-value {
     min-height: 190px;
+    border-radius: 20px;
   }
 }

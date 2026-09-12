@@ -1,107 +1,158 @@
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 .footer {
   position: relative;
-  padding: 80px 6% 30px;
-  background: #03050c;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 100px 6% 35px;
+
+  background:
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(22, 131, 255, 0.1),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #03050c 0%,
+      #040711 100%
+    );
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
   overflow: hidden;
 }
 
-/* GRID BACKGROUND */
+
+/* =========================================
+   GRID BACKGROUND
+========================================= */
 
 .footer-grid {
   position: absolute;
   inset: 0;
+
   pointer-events: none;
+
   background-image:
     linear-gradient(
-      rgba(255, 255, 255, 0.025) 1px,
+      rgba(255, 255, 255, 0.018) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.025) 1px,
+      rgba(255, 255, 255, 0.018) 1px,
       transparent 1px
     );
-  background-size: 70px 70px;
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 20%,
-    black 80%,
-    transparent
-  );
+
+  background-size: 80px 80px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 15%,
+      black 75%,
+      transparent
+    );
 }
 
-/* GLOW */
+
+/* =========================================
+   GLOW
+========================================= */
 
 .footer-glow {
   position: absolute;
-  width: 500px;
-  height: 500px;
+
+  width: 600px;
+  height: 600px;
+
   left: 50%;
-  bottom: -250px;
+  bottom: -320px;
+
   transform: translateX(-50%);
+
   border-radius: 50%;
-  background: rgba(22, 131, 255, 0.08);
-  filter: blur(120px);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(22, 131, 255, 0.16),
+      transparent 68%
+    );
+
+  filter: blur(70px);
+
   pointer-events: none;
 }
 
-/* =========================
+
+/* =========================================
    MAIN
-========================= */
+========================================= */
 
 .footer-main {
   position: relative;
   z-index: 2;
 
   display: grid;
-  grid-template-columns:
-    1.5fr
-    0.7fr
-    0.7fr;
+  grid-template-columns: 1.6fr 0.8fr 0.8fr;
 
-  gap: 80px;
+  gap: 100px;
 
-  padding-bottom: 70px;
+  padding-bottom: 90px;
 }
 
-/* =========================
+
+/* =========================================
    BRAND
-========================= */
+========================================= */
 
 .footer-brand {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
+
+  gap: 24px;
 }
 
 .footer-logo-wrap {
-  width: 58px;
-  height: 58px;
+  width: 72px;
+  height: 72px;
+
+  flex-shrink: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.025);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.015)
+    );
 
   border-radius: 50%;
+
+  box-shadow:
+    0 0 30px rgba(22, 131, 255, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
   overflow: hidden;
 }
 
-
 .footer-logo-wrap img {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
+
   object-fit: contain;
+
   border-radius: 50%;
 }
+
 
 .footer-brand-text {
   display: flex;
@@ -109,133 +160,197 @@
 }
 
 .footer-overline {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 
   color: #1683ff;
 
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: 3px;
+  font-weight: 600;
 }
 
 .footer-brand-text h3 {
   margin: 0;
 
-  font-size: 30px;
-  line-height: 0.9;
-  letter-spacing: -1.5px;
+  font-size: clamp(34px, 3vw, 48px);
+
+  line-height: 0.88;
+  letter-spacing: -2.5px;
+
   font-weight: 800;
 }
 
 .footer-brand-text p {
-  margin: 14px 0 0;
+  margin: 18px 0 0;
 
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.35);
 
-  font-size: 8px;
+  font-size: 11px;
   line-height: 1.7;
-  letter-spacing: 1.5px;
+
+  letter-spacing: 1.8px;
 }
 
-/* =========================
+
+/* =========================================
    NAVIGATION & SOCIAL
-========================= */
+========================================= */
 
 .footer-navigation,
 .footer-social {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+
+  gap: 14px;
 }
 
 .footer-label {
   display: block;
+
   margin-bottom: 10px;
 
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.3);
 
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 3px;
+  font-weight: 600;
 }
 
 .footer-navigation a,
 .footer-social a {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   width: fit-content;
 
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
 
-  font-size: 10px;
+  font-size: 14px;
+  font-weight: 500;
+
   text-decoration: none;
 
   transition:
-    color 0.3s,
-    transform 0.3s;
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-navigation a::after,
+.footer-social a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -5px;
+
+  width: 0;
+  height: 1px;
+
+  background: #1683ff;
+
+  transition: width 0.3s ease;
 }
 
 .footer-navigation a:hover,
 .footer-social a:hover {
-  color: #1683ff;
-  transform: translateX(5px);
+  color: #ffffff;
+
+  transform: translateX(6px);
 }
 
+.footer-navigation a:hover::after,
+.footer-social a:hover::after {
+  width: 100%;
+}
+
+
 .footer-social a span {
-  margin-left: 15px;
+  margin-left: 20px;
 
   color: rgba(255, 255, 255, 0.25);
 
-  transition: 0.3s;
+  font-size: 13px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .footer-social a:hover span {
   color: #1683ff;
-  transform: translate(3px, -3px);
+
+  transform: translate(4px, -4px);
 }
 
-/* =========================
+
+/* =========================================
    BIG TEXT
-========================= */
+========================================= */
 
 .footer-big-text {
   position: relative;
   z-index: 2;
 
   width: 100%;
+
   overflow: hidden;
 
-  padding: 55px 0;
+  padding: 65px 0;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .footer-big-track {
   display: flex;
   align-items: center;
-  gap: 18px;
+
+  gap: 28px;
 
   width: max-content;
 
-  animation: footerMarquee 18s linear infinite;
+  animation:
+    footerMarquee 20s linear infinite;
 }
 
 .footer-big-track span {
   color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.16);
 
-  font-size: clamp(45px, 8vw, 110px);
+  -webkit-text-stroke:
+    1px rgba(255, 255, 255, 0.2);
+
+  font-size: clamp(60px, 9vw, 125px);
+
   line-height: 0.8;
-  letter-spacing: -5px;
+
+  letter-spacing: -6px;
+
   font-weight: 800;
+
   white-space: nowrap;
+
+  transition:
+    -webkit-text-stroke 0.3s ease;
+}
+
+.footer-big-track span:hover {
+  -webkit-text-stroke:
+    1px rgba(22, 131, 255, 0.7);
 }
 
 .footer-big-track i {
   color: #1683ff;
-  font-size: 18px;
+
+  font-size: 22px;
+
   font-style: normal;
+
+  text-shadow:
+    0 0 20px rgba(22, 131, 255, 0.35);
 }
 
 @keyframes footerMarquee {
@@ -248,15 +363,17 @@
   }
 }
 
-/* =========================
+
+/* =========================================
    BOTTOM
-========================= */
+========================================= */
 
 .footer-bottom {
   position: relative;
   z-index: 2;
 
   display: grid;
+
   grid-template-columns:
     1fr
     1fr
@@ -266,12 +383,12 @@
 
   gap: 30px;
 
-  padding-top: 25px;
+  padding-top: 30px;
 
-  color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.3);
 
-  font-size: 7px;
-  letter-spacing: 2px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
 }
 
 .footer-bottom > div:nth-child(2) {
@@ -281,59 +398,78 @@
 .footer-bottom button {
   display: flex;
   align-items: center;
-  gap: 12px;
+
+  gap: 14px;
+
+  padding: 0;
 
   border: none;
 
   background: transparent;
 
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.45);
 
-  font-size: 7px;
-  letter-spacing: 2px;
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
 
   cursor: pointer;
 
   transition:
-    color 0.3s,
-    transform 0.3s;
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.footer-bottom button:hover {
+  color: #ffffff;
+
+  transform: translateY(-2px);
 }
 
 .footer-bottom button span {
-  width: 28px;
-  height: 28px;
+  width: 38px;
+  height: 38px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   border: 1px solid rgba(255, 255, 255, 0.12);
+
   border-radius: 50%;
 
-  font-size: 12px;
+  background: rgba(255, 255, 255, 0.02);
 
-  transition: 0.3s;
-}
+  font-size: 15px;
 
-.footer-bottom button:hover {
-  color: white;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .footer-bottom button:hover span {
-  background: white;
+  background: #ffffff;
+
   color: #050816;
+
+  border-color: #ffffff;
 
   transform: translateY(-4px);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media (max-width: 900px) {
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
   .footer-main {
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+
+    gap: 60px;
   }
 
   .footer-brand {
@@ -342,46 +478,91 @@
 
   .footer-bottom {
     grid-template-columns: 1fr;
-    gap: 15px;
+
+    gap: 18px;
   }
 
   .footer-bottom > div:nth-child(2) {
     text-align: left;
   }
+
+  .footer-bottom button {
+    margin-top: 5px;
+  }
 }
+
 
 @media (max-width: 600px) {
   .footer {
-    padding: 60px 20px 25px;
+    padding: 70px 20px 25px;
   }
 
   .footer-main {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding-bottom: 50px;
+
+    gap: 45px;
+
+    padding-bottom: 60px;
   }
 
   .footer-brand {
     grid-column: auto;
+
+    gap: 18px;
+  }
+
+  .footer-logo-wrap {
+    width: 60px;
+    height: 60px;
+  }
+
+  .footer-logo-wrap img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .footer-overline {
+    font-size: 9px;
+  }
+
+  .footer-brand-text h3 {
+    font-size: 32px;
+
+    letter-spacing: -1.8px;
+  }
+
+  .footer-brand-text p {
+    font-size: 9px;
+  }
+
+  .footer-navigation a,
+  .footer-social a {
+    font-size: 13px;
   }
 
   .footer-big-text {
-    justify-content: flex-start;
-    gap: 12px;
-    padding: 40px 0;
+    padding: 48px 0;
   }
 
-  .footer-big-text span {
-    font-size: 45px;
+  .footer-big-track {
+    gap: 20px;
+  }
+
+  .footer-big-track span {
+    font-size: 50px;
+
     letter-spacing: -3px;
   }
 
-  .footer-big-text i {
-    font-size: 12px;
+  .footer-big-track i {
+    font-size: 14px;
   }
 
   .footer-bottom {
     grid-template-columns: 1fr;
+
+    gap: 16px;
+
+    font-size: 9px;
   }
 }
-

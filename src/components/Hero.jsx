@@ -205,23 +205,10 @@
 
           <div className="scroll-indicator">
 
-            <span>
-              SCROLL TO EXPLORE
-            </span>
-
-            <div className="scroll-line"></div>
 
           </div>
 
           <div className="year">
-
-            <span>
-              EST.
-            </span>
-
-            <strong>
-              2026
-            </strong>
 
           </div>
 

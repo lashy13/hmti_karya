@@ -9,12 +9,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 
-import PSDM from "./Pages/divisions/PSDM";
-import EKRAF from "./Pages/divisions/EKRAF";
-import ADVOKASI from "./Pages/divisions/ADVOKASI";
-import KOMINFO from "./Pages/divisions/KOMINFO";
-import HUMAS from "./Pages/divisions/HUMAS";
-import RISTEK from "./Pages/divisions/RISTEK";
 
 
 function App() {
@@ -37,12 +31,6 @@ function App() {
           }
         />
 
-        <Route path="/divisi/psdm" element={<PSDM />} />
-        <Route path="/divisi/ekraf" element={<EKRAF />} />
-        <Route path="/divisi/advokasi" element={<ADVOKASI />} />
-        <Route path="/divisi/kominfo" element={<KOMINFO />} />
-        <Route path="/divisi/humas" element={<HUMAS />} />
-        <Route path="/divisi/ristek" element={<RISTEK />} />
       </Routes>
     </BrowserRouter>
   );
