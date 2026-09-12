@@ -119,19 +119,6 @@ function Contact(){
     </div>
 
 
-    <button
-      className="back-top"
-      onClick={() => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }}
-    >
-      BACK TO TOP
-      <span>↑</span>
-    </button>
-
   </div>
 
 </section>
