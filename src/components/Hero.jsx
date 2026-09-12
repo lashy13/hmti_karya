@@ -72,7 +72,7 @@
               }}
             >
               EXPLORE HMTI
-              <span>↗</span>
+              
             </button>
 
             <button
