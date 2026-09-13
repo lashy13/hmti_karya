@@ -1,11 +1,23 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function Divisions() {
+  const navigate = useNavigate();
+
   return (
-    <section className="divisions-section" id="divisions">
+    <section id="divisions" className="divisions-section">
+
       {/* =========================
-          SECTION LABEL
+          BACK TO HMTI
       ========================= */}
+
+      <button
+        className="back-hmti-button"
+        onClick={() => navigate("/hmti")}
+      >
+        <span>←</span>
+        BACK TO HMTI
+      </button>
 
       {/* =========================
           HEADER
@@ -13,7 +25,9 @@ function Divisions() {
 
       <div className="divisions-header">
         <div>
-          <span className="division-mini">ORGANIZATIONAL STRUCTURE</span>
+          <span className="division-mini">
+            ORGANIZATIONAL STRUCTURE
+          </span>
 
           <h2>
             SIX
@@ -35,6 +49,7 @@ function Divisions() {
       ========================= */}
 
       <div className="divisions-grid">
+
         {/* =========================
             PSDM
         ========================= */}
@@ -111,11 +126,13 @@ function Divisions() {
           <div className="division-content">
             <h3>EKRAF</h3>
 
-            <span className="division-full">EKONOMI KREATIF</span>
+            <span className="division-full">
+              EKONOMI KREATIF
+            </span>
 
             <p>
-              Mendorong kreativitas mahasiswa dalam menghasilkan ide, karya, dan
-              peluang melalui kegiatan kreatif dan inovatif.
+              Mendorong kreativitas mahasiswa dalam menghasilkan ide, karya,
+              dan peluang melalui kegiatan kreatif dan inovatif.
             </p>
 
             <div className="division-mini-programs">
@@ -163,7 +180,9 @@ function Divisions() {
           <div className="division-content">
             <h3>ADVOKASI</h3>
 
-            <span className="division-full">ADVOKASI MAHASISWA</span>
+            <span className="division-full">
+              ADVOKASI MAHASISWA
+            </span>
 
             <p>
               Menjadi wadah bagi mahasiswa untuk menyampaikan aspirasi,
@@ -216,7 +235,9 @@ function Divisions() {
           <div className="division-content">
             <h3>KOMINFO</h3>
 
-            <span className="division-full">KOMUNIKASI DAN INFORMASI</span>
+            <span className="division-full">
+              KOMUNIKASI DAN INFORMASI
+            </span>
 
             <p>
               Mengelola informasi, publikasi, dan media digital HMTI agar
@@ -269,7 +290,9 @@ function Divisions() {
           <div className="division-content">
             <h3>HUMAS</h3>
 
-            <span className="division-full">HUBUNGAN MASYARAKAT</span>
+            <span className="division-full">
+              HUBUNGAN MASYARAKAT
+            </span>
 
             <p>
               Membangun dan menjaga hubungan yang baik antara HMTI dengan
@@ -321,7 +344,9 @@ function Divisions() {
           <div className="division-content">
             <h3>RISTEK</h3>
 
-            <span className="division-full">RISET DAN TEKNOLOGI</span>
+            <span className="division-full">
+              RISET DAN TEKNOLOGI
+            </span>
 
             <p>
               Berfokus pada pengembangan teknologi, riset, dan peningkatan
@@ -351,6 +376,7 @@ function Divisions() {
             <span>RISTEK</span>
           </div>
         </motion.article>
+
       </div>
 
       {/* =========================
@@ -358,6 +384,7 @@ function Divisions() {
       ========================= */}
 
       <div className="division-footer">
+
         <div className="division-counter">
           <strong>06</strong>
 
@@ -373,7 +400,9 @@ function Divisions() {
         <span className="division-footer-text">
           DIFFERENT ROLES. ONE ORGANIZATION.
         </span>
+
       </div>
+
     </section>
   );
 }

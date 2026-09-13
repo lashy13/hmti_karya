@@ -3,31 +3,43 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutInformatics from "./components/AboutInformatics";
-import AboutHmti from "./components/AboutHmti";
 import Divisions from "./components/Divisions";
 import Contact from "./components/Contact";
 import Events from "./components/Events";
+import AboutHmti from "./components/AboutHmti";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-
       <Routes>
+
+        {/* ================= HOME ================= */}
         <Route
           path="/"
           element={
             <>
+              <Navbar />
               <Hero />
               <AboutInformatics />
-              <AboutHmti />
-              <Divisions />
               <Events />
               <Contact />
             </>
           }
         />
+
+        {/* ================= HMTI PAGE ================= */}
+        <Route
+          path="/hmti"
+          element={<AboutHmti />}
+        />
+
+        <Route
+          path="/divisions"
+          element={<Divisions />}
+        />
       </Routes>
+
+      
     </BrowserRouter>
   );
 }

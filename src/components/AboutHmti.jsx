@@ -1,16 +1,76 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 function AboutHmti() {
+  const navigate = useNavigate();
+
+  const bphMembers = [
+    {
+      name: "Nama Ketua",
+      position: "KETUA HMTI",
+      image: "/bph/ketua.jpg",
+      description:
+        "Memimpin dan mengarahkan organisasi serta memastikan seluruh kegiatan HMTI berjalan sesuai tujuan.",
+    },
+    {
+      name: "Nama Wakil",
+      position: "WAKIL KETUA",
+      image: "/bph/wakil.jpg",
+      description:
+        "Mendampingi ketua dalam menjalankan organisasi serta membantu koordinasi antar bagian dalam HMTI.",
+    },
+    {
+      name: "Nama Sekretaris",
+      position: "SEKRETARIS 1",
+      image: "/bph/sekretaris.jpg",
+      description:
+        "Mengelola administrasi, dokumentasi, dan kebutuhan kesekretariatan organisasi.",
+    },
+
+      {
+      name: "Nama Sekretaris",
+      position: "SEKRETARIS",
+      image: "/bph/sekretaris.jpg",
+      description:
+        "Mengelola administrasi, dokumentasi, dan kebutuhan kesekretariatan organisasi.",
+    },
+
+     {
+      name: "Nama Bendahara",
+      position: "BENDAHARA1",
+      image: "/bph/bendahara.jpg",
+      description:
+        "Mengelola keuangan organisasi secara tertib, transparan, dan bertanggung jawab.",
+    },
+    {
+      name: "Nama Bendahara",
+      position: "BENDAHARA1",
+      image: "/bph/bendahara.jpg",
+      description:
+        "Mengelola keuangan organisasi secara tertib, transparan, dan bertanggung jawab.",
+    },
+
+  ];
+
   return (
     <>
       {/* =========================
-          HMTI SECTION
+          HMTI
       ========================= */}
-      <section className="hmti-section" id="hmti">
-        
+
+      <section className="hmti-section">
+
+        <button
+          className="back-button"
+          onClick={() => navigate("/")}
+        >
+          BACK TO HOME
+        </button>
 
         <div className="hmti-header">
+
           <div className="hmti-title">
+
             <span className="hmti-mini">
               HIMPUNAN MAHASISWA
             </span>
@@ -20,42 +80,91 @@ function AboutHmti() {
               <br />
               <span>COMMUNITY.</span>
             </h2>
+
           </div>
 
           <div className="hmti-description">
+
             <p>
               Himpunan Mahasiswa Teknik Informatika atau HMTI
-              merupakan wadah mahasiswa Teknik Informatika
-              untuk berkembang bersama dalam bidang akademik,
-              teknologi, organisasi, dan pengembangan diri.
+              merupakan wadah mahasiswa Teknik Informatika untuk
+              berkembang bersama dalam bidang akademik, teknologi,
+              organisasi, dan pengembangan diri.
             </p>
 
             <p>
-              HMTI tidak hanya menjadi tempat berorganisasi,
-              tetapi juga ruang untuk membangun relasi,
-              mengembangkan potensi, dan menciptakan berbagai
-              kegiatan yang memberikan dampak bagi mahasiswa.
+              HMTI menjadi ruang bagi mahasiswa untuk membangun
+              relasi, mengembangkan potensi, bertukar ide, dan
+              menciptakan berbagai kegiatan yang memberikan
+              manfaat bagi mahasiswa Teknik Informatika.
             </p>
+
           </div>
+
         </div>
 
+
         {/* =========================
-            HMTI INFO
+            TUJUAN HMTI
         ========================= */}
+
+        <div className="hmti-purpose">
+
+          <div className="purpose-label">
+
+            <span>01</span>
+
+            <p>
+              TUJUAN HMTI
+            </p>
+
+          </div>
+
+          <div className="purpose-content">
+
+            <h3>
+              DEVELOPING
+              <br />
+              <span>PEOPLE.</span>
+            </h3>
+
+            <p>
+              HMTI bertujuan menjadi wadah bagi mahasiswa Teknik
+              Informatika untuk mengembangkan kemampuan akademik,
+              keterampilan teknologi, pengalaman organisasi,
+              serta kemampuan bekerja sama.
+            </p>
+
+            <p>
+              Melalui berbagai kegiatan dan program kerja, HMTI
+              mendorong mahasiswa untuk terus belajar, berinovasi,
+              dan berkontribusi dalam lingkungan kampus maupun
+              masyarakat.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        {/* =========================
+            NILAI HMTI
+        ========================= */}
+
         <div className="hmti-info-grid">
-          {/* INFO 01 */}
+
           <motion.div
             className="hmti-info-card large"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
           >
             <span className="info-number">01</span>
 
             <div>
+
               <span className="info-label">
-                OUR PURPOSE
+                DEVELOPMENT
               </span>
 
               <h3>
@@ -63,26 +172,26 @@ function AboutHmti() {
                 <br />
                 <span>People.</span>
               </h3>
+
             </div>
 
             <p>
-              Mendorong mahasiswa untuk terus belajar,
-              berkembang, dan memiliki kemampuan yang
-              relevan dengan perkembangan teknologi.
+              Mendorong mahasiswa untuk terus belajar dan
+              mengembangkan kemampuan yang relevan dengan
+              perkembangan teknologi.
             </p>
+
           </motion.div>
 
-          {/* INFO 02 */}
+
           <motion.div
             className="hmti-info-card"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.1,
-            }}
+            transition={{ delay: 0.1 }}
           >
+
             <span className="info-number">02</span>
 
             <div className="info-symbol">
@@ -98,22 +207,21 @@ function AboutHmti() {
             </h3>
 
             <p>
-              Mengubah ide menjadi karya dan solusi
-              yang bermanfaat.
+              Mengubah ide menjadi karya dan solusi yang
+              bermanfaat.
             </p>
+
           </motion.div>
 
-          {/* INFO 03 */}
+
           <motion.div
             className="hmti-info-card"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.2,
-            }}
+            transition={{ delay: 0.2 }}
           >
+
             <span className="info-number">03</span>
 
             <div className="info-symbol">
@@ -129,26 +237,24 @@ function AboutHmti() {
             </h3>
 
             <p>
-              Membangun hubungan dan kolaborasi
-              antar mahasiswa.
+              Membangun hubungan dan kolaborasi antar mahasiswa.
             </p>
+
           </motion.div>
 
-          {/* INFO 04 */}
+
           <motion.div
             className="hmti-info-card"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: 0.3,
-            }}
+            transition={{ delay: 0.3 }}
           >
+
             <span className="info-number">04</span>
 
             <div className="info-symbol">
-              ⚖
+              +
             </div>
 
             <span className="info-label">
@@ -160,142 +266,152 @@ function AboutHmti() {
             </h3>
 
             <p>
-              Menciptakan gagasan baru melalui
-              pemanfaatan teknologi.
+              Menciptakan gagasan baru melalui pemanfaatan
+              teknologi.
             </p>
+
           </motion.div>
+
         </div>
+
       </section>
 
+
       {/* =========================
-          ABOUT HMTI SECTION
+          BPH
       ========================= */}
-      <section
-        className="about-hmti-section"
-        id="about-hmti"
-      >
-        <div className="about-hmti-header">
-          <div className="about-hmti-title">
+
+      <section className="bph-section">
+
+        <div className="bph-header">
+
+          <div>
+
             <span className="about-mini">
-              HIMPUNAN MAHASISWA TEKNIK INFORMATIKA
+              STRUKTUR ORGANISASI
             </span>
 
             <h2>
-              MORE THAN
+              BPH
               <br />
-              <span>AN ORGANIZATION.</span>
+              <span>HMTI.</span>
             </h2>
+
           </div>
-
-          <div className="about-hmti-intro">
-            <p>
-              HMTI menjadi wadah bagi mahasiswa Teknik
-              Informatika untuk berkembang, berkolaborasi,
-              menyampaikan aspirasi, dan menciptakan
-              sesuatu yang memiliki dampak.
-            </p>
-
-            <div className="about-accent-line"></div>
-
-            <span>
-              UNIVERSITAS MUHAMMADIYAH PURWOKERTO
-            </span>
-          </div>
-        </div>
-
-        {/* =========================
-            BIG STATEMENT
-        ========================= */}
-        <div className="about-statement">
-          <h3>
-            CONNECT.
-            <br />
-            CREATE.
-            <br />
-            <span>GROW.</span>
-          </h3>
 
           <p>
-            Bukan hanya tentang menjalankan sebuah
-            organisasi. HMTI adalah tentang bagaimana
-            mahasiswa saling terhubung, bertukar ide,
-            membangun pengalaman, dan tumbuh bersama.
+            Badan Pengurus Harian merupakan bagian yang memiliki
+            peran dalam mengelola, mengoordinasikan, dan memastikan
+            organisasi HMTI berjalan dengan baik sesuai dengan
+            tujuan yang telah ditetapkan.
           </p>
+
         </div>
+
 
         {/* =========================
-            VALUES
+            BPH MEMBERS
         ========================= */}
-        <div className="about-values">
-          {/* VALUE 01 */}
-          <motion.div
-            className="about-value"
-            whileHover={{ y: -5 }}
-          >
-            <span>01</span>
 
-            <h4>
-              COLLABORATION
-            </h4>
+        <div className="bph-grid">
 
-            <p>
-              Membangun lingkungan yang mendorong
-              mahasiswa untuk bekerja bersama dan
-              saling mendukung.
-            </p>
-          </motion.div>
+          {bphMembers.map((member, index) => (
 
-          {/* VALUE 02 */}
-          <motion.div
-            className="about-value"
-            whileHover={{ y: -5 }}
-          >
-            <span>02</span>
+            <motion.div
+              className="bph-card"
+              key={member.position}
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+              }}
+            >
 
-            <h4>
-              INNOVATION
-            </h4>
+              <div className="bph-photo">
 
-            <p>
-              Mendorong lahirnya ide dan karya baru
-              melalui kreativitas serta pemanfaatan
-              teknologi.
-            </p>
-          </motion.div>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                />
 
-          {/* VALUE 03 */}
-          <motion.div
-            className="about-value"
-            whileHover={{ y: -5 }}
-          >
-            <span>03</span>
+                <span className="bph-number">
+                  0{index + 1}
+                </span>
 
-            <h4>
-              DEVELOPMENT
-            </h4>
+              </div>
 
-            <p>
-              Membantu mahasiswa mengembangkan
-              kemampuan dan pengalaman untuk
-              menghadapi masa depan.
-            </p>
-          </motion.div>
+
+              <div className="bph-info">
+
+                <span>
+                  {member.position}
+                </span>
+
+                <h3>
+                  {member.name}
+                </h3>
+
+                <p>
+                  {member.description}
+                </p>
+
+              </div>
+
+            </motion.div>
+
+          ))}
+
         </div>
+
 
         {/* =========================
-            BOTTOM
+            DIVISION CTA
         ========================= */}
-        <div className="about-hmti-bottom">
-          <span>
-            HMTI UMP
-          </span>
 
-          <div></div>
+        <div className="hmti-divisions-cta">
 
-          <span>
-            EST. 2026
-          </span>
+          <div>
+
+            <span>
+              HMTI ORGANIZATIONAL STRUCTURE
+            </span>
+
+            <h3>
+              EXPLORE OUR
+              <br />
+              <span>DIVISIONS.</span>
+            </h3>
+
+          </div>
+
+
+          <button
+            className="division-button"
+            onClick={() => navigate("/divisions")}
+          >
+
+            <span>
+              EXPLORE DIVISIONS
+            </span>
+
+            <strong>
+              →
+            </strong>
+
+          </button>
+
         </div>
+
       </section>
     </>
   );

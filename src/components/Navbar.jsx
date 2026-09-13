@@ -25,20 +25,10 @@ function Navbar(){
     <div className="nav-links">
   <a href="#home">Home</a>
   <a href="#about">About</a>
-  <a href="#hmti">HMTI</a>
   <a href="#divisions">Divisi</a>
   <a href="#events">Events</a>
   <a href="#contact">Contact</a>
 </div>
-        <button
-          className="nav-button"
-          onClick={() => {
-            document.getElementById("hmti")?.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          HMTI
-          
-        </button>
       </nav> 
     );
 }
