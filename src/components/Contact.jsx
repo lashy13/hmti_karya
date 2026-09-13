@@ -81,8 +81,6 @@ function Contact() {
             <div className="contact-nav-links">
               <a href="#home">Home</a>
               <a href="#about">About</a>
-              <a href="#hmti">HMTI</a>
-              <a href="#divisions">Divisi</a>
               <a href="#events">Events</a>
             </div>
 

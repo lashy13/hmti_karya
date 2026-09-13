@@ -30,16 +30,15 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #050816;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1683ff;
-  border-radius: 10px;
+  background: #f7f8f8;
+  border-radius: 2px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #00d9ff;
+  background: #f9fafa;
 }
 * {
   margin: 0;
