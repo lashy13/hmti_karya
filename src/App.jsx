@@ -6,7 +6,7 @@ import AboutInformatics from "./components/AboutInformatics";
 import AboutHmti from "./components/AboutHmti";
 import Divisions from "./components/Divisions";
 import Contact from "./components/Contact";
-import Events from "./components/events";
+import Events from "./components/Events";
 
 function App() {
   return (
