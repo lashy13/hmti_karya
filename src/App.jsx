@@ -6,7 +6,7 @@ import AboutInformatics from "./components/AboutInformatics";
 import AboutHmti from "./components/AboutHmti";
 import Divisions from "./components/Divisions";
 import Contact from "./components/Contact";
-import Events from "./components/Events";
+import Events from "./components/events";
 
 function App() {
   return (
@@ -24,7 +24,6 @@ function App() {
               <Divisions />
               <Events />
               <Contact />
-              
             </>
           }
         />
