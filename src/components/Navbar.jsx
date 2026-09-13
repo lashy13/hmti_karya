@@ -1,12 +1,22 @@
-import tiLogo from "../assets/ti-logo.png"; 
+import logoUmp from "../assets/logo-ump.png";
+import logoIf from "../assets/ti-logo.png"; 
 
 function Navbar(){
     return(
     <nav className="navbar">
         <div className="brand">
+          {/* Logo UMP di sebelah kiri */}
           <img
-            src={tiLogo}
+            src={logoUmp}
+            alt="Logo UMP"
+            className="logo-ump"
+          />
+
+          {/* Logo IF di sebelah kanan */}
+          <img
+            src={logoIf}
             alt="Logo Teknik Informatika"
+            className="logo-if"
           />
 
           <div className="brand-text">
@@ -22,12 +32,12 @@ function Navbar(){
           </div>
         </div>
 
-    <div className="nav-links">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#events">Events</a>
-  <a href="#contact">Contact</a>
-</div>
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#events">Events</a>
+          <a href="#contact">Contact</a>
+        </div>
       </nav> 
     );
 }
