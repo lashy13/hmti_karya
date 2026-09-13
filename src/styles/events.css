@@ -1,0 +1,554 @@
+/* ========================================
+   EVENTS PAGE
+======================================== */
+
+.events-page {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(37, 99, 235, 0.12),
+      transparent 40%
+    ),
+    #050b18;
+
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.events-hero {
+  min-height: 55vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 24px 50px;
+
+  text-align: center;
+  position: relative;
+}
+
+.events-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  background: rgba(37, 99, 235, 0.08);
+
+  filter: blur(120px);
+
+  border-radius: 50%;
+
+  top: 30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+.events-hero-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 800px;
+}
+
+
+/* ========================================
+   HERO LABEL
+======================================== */
+
+.events-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #60a5fa;
+
+  font-size: 11.5px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   HERO TITLE - GRADIENT
+======================================== */
+
+.events-hero h1 {
+  margin: 0;
+
+  font-size: clamp(40px, 6.5vw, 82px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #60a5fa 45%,
+    #2563eb 70%,
+    #ffffff 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  text-shadow:
+    0 0 20px rgba(59, 130, 246, 0.25);
+}
+
+
+/* ========================================
+   HERO TITLE SPAN
+======================================== */
+
+.events-hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #3b82f6,
+    #93c5fd
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  text-shadow: none;
+}
+
+
+/* ========================================
+   HERO DESCRIPTION
+======================================== */
+
+.events-hero p {
+  max-width: 580px;
+
+  margin: 22px auto 0;
+
+  color: #94a3b8;
+
+  font-size: 15.5px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   EVENTS CONTAINER
+======================================== */
+
+.events-container {
+  width: min(1000px, 88%);
+
+  margin: 0 auto;
+
+  padding: 30px 0 100px;
+}
+
+
+/* ========================================
+   EVENT ITEM
+======================================== */
+
+.event-item {
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+
+  gap: 55px;
+
+  margin-bottom: 100px;
+}
+
+.event-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ========================================
+   REVERSE EVENT
+======================================== */
+
+.event-reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.event-reverse .event-image-wrapper {
+  order: 2;
+}
+
+.event-reverse .event-content {
+  order: 1;
+}
+
+
+/* ========================================
+   IMAGE WRAPPER
+======================================== */
+
+.event-image-wrapper {
+  position: relative;
+
+  border-radius: 20px;
+
+  isolation: isolate;
+
+  box-shadow:
+    0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+.event-image-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -1px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.4),
+    transparent 60%
+  );
+
+  z-index: -1;
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.event-image {
+  display: block;
+
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 19px;
+
+  filter: brightness(0.9);
+
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.5s ease;
+}
+
+.event-image-wrapper:hover .event-image {
+  transform: scale(1.02);
+
+  filter: brightness(1);
+}
+
+
+/* ========================================
+   EVENT NUMBER
+======================================== */
+
+.event-number {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 16px;
+  left: 16px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(5, 11, 24, 0.85);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(12px);
+
+  color: #60a5fa;
+
+  font-size: 13.5px;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   EVENT CONTENT
+======================================== */
+
+.event-content {
+  max-width: 460px;
+}
+
+.event-small-title {
+  display: inline-block;
+
+  color: #3b82f6;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   EVENT TITLE
+======================================== */
+
+.event-content h2 {
+  margin: 10px 0 24px;
+
+  font-size: clamp(28px, 3.2vw, 44px);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+/* ========================================
+   EVENT INFO
+======================================== */
+
+.event-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.event-info-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* ========================================
+   INFO ICON
+======================================== */
+
+.info-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: rgba(59, 130, 246, 0.08);
+
+  font-size: 15px;
+}
+
+
+/* ========================================
+   INFO LABEL
+======================================== */
+
+.info-label {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #64748b;
+
+  font-size: 9.5px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   INFO TEXT
+======================================== */
+
+.event-info-item p {
+  margin: 0;
+
+  color: #cbd5e1;
+
+  font-size: 13px;
+}
+
+
+/* ========================================
+   DIVIDER
+======================================== */
+
+.event-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 24px 0;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.event-description {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .event-item,
+  .event-reverse {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 80px;
+  }
+
+  .event-reverse .event-image-wrapper,
+  .event-reverse .event-content {
+    order: initial;
+  }
+
+  .event-content {
+    max-width: 100%;
+  }
+
+  .event-image {
+    height: 300px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .events-hero {
+    min-height: 45vh;
+
+    padding: 70px 20px 35px;
+  }
+
+  .events-hero p {
+    font-size: 13.5px;
+  }
+
+  .events-container {
+    width: 90%;
+
+    padding-bottom: 70px;
+  }
+
+  .event-image {
+    height: 240px;
+  }
+
+  .event-number {
+    width: 38px;
+    height: 38px;
+
+    top: 12px;
+    left: 12px;
+
+    font-size: 11.5px;
+  }
+
+  .event-content h2 {
+    font-size: 28px;
+  }
+
+  .event-description {
+    font-size: 13.5px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 400px) {
+
+  .events-hero h1 {
+    font-size: 34px;
+  }
+
+  .event-content h2 {
+    font-size: 24px;
+  }
+
+  .event-image {
+    height: 200px;
+  }
+}

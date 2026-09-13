@@ -11,6 +11,7 @@ import "./styles/divisions.css";
 import "./styles/programs.css";
 import "./styles/contact.css";
 import "./styles/footer.css";
+import "./styles/events.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

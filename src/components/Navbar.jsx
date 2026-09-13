@@ -27,6 +27,7 @@ function Navbar(){
   <a href="#about">About</a>
   <a href="#hmti">HMTI</a>
   <a href="#divisions">Divisi</a>
+  <a href="#events">Events</a>
   <a href="#contact">Contact</a>
 </div>
         <button
