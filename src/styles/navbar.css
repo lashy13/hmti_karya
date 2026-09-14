@@ -1,221 +1,696 @@
-/* =========================
+/* =========================================================
    NAVBAR
-========================= */
+========================================================= */
 
 .navbar {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
+
   z-index: 1000;
+
   width: calc(100% - 80px);
   max-width: 1400px;
   height: 72px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 18px 0 25px;
-  background: rgba(5, 8, 22, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 0 20px 0 25px;
+  box-sizing: border-box;
+
+  background: rgba(5, 8, 22, 0.72);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
+
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
-/* =========================
-   BRAND & LOGOS
-========================= */
+
+/* =========================================================
+   BRAND
+========================================================= */
 
 .brand {
   display: flex;
   align-items: center;
+
   gap: 10px;
-  text-decoration: none;
+
+  min-width: 0;
+  flex-shrink: 1;
 }
+
+
+/* =========================================================
+   LOGO UMP
+========================================================= */
 
 .logo-ump {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-  border-radius: 50%;
-}
-
-.logo-if {
-  width: 38px;
-  height: 38px;
-  object-fit: contain;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-left: 4px;
-}
-
-.brand-text strong {
-  color: white;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-}
-
-.brand-text .tagline {
-  color: #1683ff;
-  font-size: 9px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.brand-text small {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 9px;
-  letter-spacing: 0.5px;
-}
-
-/* =========================
-   NAV LINKS
-========================= */
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 35px;
-}
-
-.nav-links a {
-  position: relative;
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -8px;
-  width: 0;
-  height: 1px;
-  transform: translateX(-50%);
-  background: #1683ff;
-  transition: width 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: white;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* =========================
-   RESPONSIVE NAVBAR (TABLET & HP)
-========================= */
-
-@media (max-width: 900px) {
-  .navbar {
-    width: calc(100% - 30px);
-    height: 65px;
-  }
-  .nav-links {
-    gap: 18px;
-  }
-  .nav-links a {
-    font-size: 13px;
-  }
-  .brand-text small {
-    display: none;
-  }
-}
-
-@media (max-width: 650px) {
-  .navbar {
-    width: calc(100% - 16px);
-    height: 56px;
-    padding: 0 10px;
-  }
-
-  /* Ukuran logo disesuaikan agar pas di layar HP */
-  .logo-ump, .logo-if {
-    width: 28px;
-    height: 28px;
-  }
-
-  /* Teks samping logo disembunyikan agar tidak menabrak menu */
-  .brand-text {
-    display: none;
-  }
-
-  .brand {
-    gap: 6px;
-  }
-
-  /* Jarak dan ukuran font menu diperkecil agar pas satu baris di HP */
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: 11px;
-    letter-spacing: 0.5px;
-  }
-}
-
-.logo-divider {
-  width: 1px;
+  width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.4);
-  margin: 0 12px;
-}
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.logo-ump {
-  width: 48px;
-  height: 48px;
   object-fit: contain;
+
+  flex-shrink: 0;
 }
+
+
+/* =========================================================
+   TEXT UMP
+========================================================= */
 
 .ump-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  line-height: 1.15;
+
+  line-height: 1.1;
+
+  min-width: 0;
+  flex-shrink: 1;
 }
+
+
+/* Universitas */
 
 .ump-text strong {
-  font-size: 16px;
+  color: #ffffff;
+
+  font-size: 15px;
   font-weight: 700;
+
   letter-spacing: 0.3px;
+
+  white-space: nowrap;
 }
 
-.ump-text .tagline {
-    font-size: 14px;
-  font-weight: 600;
+
+/* Muhammadiyah */
+
+.ump-muhammadiyah {
   margin-top: 3px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
 
   background: linear-gradient(
     90deg,
     #ffffff 0%,
+    #b9ddff 45%,
     #1683ff 100%
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   background-clip: text;
 }
 
+
+/* Purwokerto */
+
 .ump-text small {
-  font-size: 12px;
-  opacity: 0.65;
   margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 9px;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   GARIS PEMISAH
+========================================================= */
+
+.logo-divider {
+  width: 1px;
+  height: 40px;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  margin: 0 5px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   LOGO TEKNIK INFORMATIKA
+========================================================= */
+
+.logo-if {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TEXT TEKNIK INFORMATIKA
+========================================================= */
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 3px;
+
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+
+/* Teknik Informatika */
+
+.brand-text strong {
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SMART • CREATIVE • PROGRESSIVE
+========================================================= */
+
+.brand-text .if-tagline {
+  display: block;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ffffff 20%,
+    #9bd2ff 50%,
+    #1683ff 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+
+/* =========================================================
+   SUBTEXT TEKNIK INFORMATIKA
+========================================================= */
+
+.brand-text small {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 8px;
+
+  letter-spacing: 0.3px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  flex-shrink: 0;
+}
+
+
+.nav-links a {
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+
+/* Garis bawah */
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background: #1683ff;
+
+  transition: width 0.3s ease;
+}
+
+
+/* Hover */
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+   1100px KE BAWAH
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    width: calc(100% - 30px);
+
+    padding: 0 15px;
+  }
+
+
+  .brand {
+    gap: 7px;
+  }
+
+
+  .logo-ump {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  .logo-divider {
+    height: 34px;
+
+    margin: 0 3px;
+  }
+
+
+  .logo-if {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  /* UMP */
+
+  .ump-text strong {
+    font-size: 12px;
+  }
+
+
+  .ump-muhammadiyah {
+    font-size: 10px;
+  }
+
+
+  .ump-text small {
+    font-size: 7px;
+  }
+
+
+  /* Informatika */
+
+  .brand-text strong {
+    font-size: 12px;
+  }
+
+
+  .brand-text .if-tagline {
+    font-size: 7px;
+
+    letter-spacing: 0.8px;
+  }
+
+
+  .brand-text small {
+    font-size: 7px;
+  }
+
+
+  /* Navigation */
+
+  .nav-links {
+    gap: 15px;
+  }
+
+
+  .nav-links a {
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
+  }
+}
+
+
+/* =========================================================
+   HP
+   700px KE BAWAH
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    top: 10px;
+
+    width: calc(100% - 14px);
+
+    height: 58px;
+
+    padding: 0 8px;
+  }
+
+
+  /* =====================================================
+     BRAND
+  ===================================================== */
+
+  .brand {
+    gap: 4px;
+
+    flex: 1;
+
+    min-width: 0;
+  }
+
+
+  /* =====================================================
+     LOGO UMP
+  ===================================================== */
+
+  .logo-ump {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  /* =====================================================
+     TEXT UMP
+  ===================================================== */
+
+  .ump-text {
+    gap: 1px;
+
+    min-width: 0;
+  }
+
+
+  .ump-text strong {
+    font-size: 8px;
+
+    letter-spacing: 0;
+  }
+
+
+  .ump-muhammadiyah {
+    margin-top: 1px;
+
+    font-size: 6px;
+
+    letter-spacing: 0;
+  }
+
+
+  .ump-text small {
+    margin-top: 1px;
+
+    font-size: 5px;
+
+    letter-spacing: 0;
+  }
+
+
+  /* =====================================================
+     GARIS
+  ===================================================== */
+
+  .logo-divider {
+    height: 26px;
+
+    margin: 0 2px;
+  }
+
+
+  /* =====================================================
+     LOGO IF
+  ===================================================== */
+
+  .logo-if {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  /* =====================================================
+     TEXT INFORMATIKA
+  ===================================================== */
+
+  .brand-text {
+    gap: 1px;
+
+    min-width: 0;
+  }
+
+
+  .brand-text strong {
+    font-size: 8px;
+
+    letter-spacing: 0;
+  }
+
+
+  /* Gradient tagline */
+
+  .brand-text .if-tagline {
+    font-size: 4.8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.25px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #9bd2ff 50%,
+      #1683ff 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+  }
+
+
+  .brand-text small {
+    font-size: 4.8px;
+
+    letter-spacing: 0;
+
+    white-space: nowrap;
+  }
+
+
+  /* =====================================================
+     NAV MENU
+  ===================================================== */
+
+  .nav-links {
+    gap: 6px;
+
+    flex-shrink: 0;
+  }
+
+
+  .nav-links a {
+    font-size: 7px;
+
+    letter-spacing: 0.1px;
+  }
+
+
+  .nav-links a::after {
+    bottom: -4px;
+  }
+}
+
+
+/* =========================================================
+   HP KECIL
+   400px KE BAWAH
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .navbar {
+    top: 8px;
+
+    width: calc(100% - 10px);
+
+    height: 54px;
+
+    padding: 0 5px;
+  }
+
+
+  /* =====================================================
+     BRAND
+  ===================================================== */
+
+  .brand {
+    gap: 3px;
+  }
+
+
+  /* =====================================================
+     LOGO UMP
+  ===================================================== */
+
+  .logo-ump {
+    width: 25px;
+    height: 25px;
+  }
+
+
+  /* =====================================================
+     TEXT UMP
+  ===================================================== */
+
+  .ump-text strong {
+    font-size: 7px;
+  }
+
+
+  .ump-muhammadiyah {
+    font-size: 5.5px;
+
+    letter-spacing: 0;
+  }
+
+
+  .ump-text small {
+    font-size: 4.5px;
+  }
+
+
+  /* =====================================================
+     GARIS
+  ===================================================== */
+
+  .logo-divider {
+    height: 23px;
+
+    margin: 0 1px;
+  }
+
+
+  /* =====================================================
+     LOGO IF
+  ===================================================== */
+
+  .logo-if {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  /* =====================================================
+     TEKNIK INFORMATIKA
+  ===================================================== */
+
+  .brand-text strong {
+    font-size: 7px;
+  }
+
+
+  .brand-text .if-tagline {
+    font-size: 4.2px;
+
+    letter-spacing: 0.1px;
+
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      #9bd2ff 50%,
+      #1683ff 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+  }
+
+
+  .brand-text small {
+    font-size: 4.5px;
+  }
+
+
+  /* =====================================================
+     MENU
+  ===================================================== */
+
+  .nav-links {
+    gap: 4px;
+  }
+
+
+  .nav-links a {
+    font-size: 6px;
+
+    letter-spacing: 0;
+  }
 }
