@@ -165,3 +165,57 @@
     letter-spacing: 0.5px;
   }
 }
+
+.logo-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.4);
+  margin: 0 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-ump {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.ump-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.15;
+}
+
+.ump-text strong {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.ump-text .tagline {
+    font-size: 14px;
+  font-weight: 600;
+  margin-top: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #1683ff 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ump-text small {
+  font-size: 12px;
+  opacity: 0.65;
+  margin-top: 3px;
+}
