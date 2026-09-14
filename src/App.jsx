@@ -7,6 +7,7 @@ import Divisions from "./components/Divisions";
 import Contact from "./components/Contact";
 import Events from "./components/Events";
 import AboutHmti from "./components/AboutHmti";
+import AspirasiPage from "./components/AspirasiPage";
 
 function App() {
   return (

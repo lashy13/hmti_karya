@@ -1,221 +1,99 @@
-import tiLogo from "../assets/ti-logo.png";
+import React from 'react';
+import logoUmp from '../assets/logo-ump.png';
+import '../styles/contact.css';
 
 function Contact() {
   return (
     <section className="contact-section" id="contact">
-
-      {/* GLOW */}
       <div className="contact-glow"></div>
 
-
-      {/* SIDE DECORATION */}
-      <div className="contact-decoration contact-decoration-left">
-        <span className="decoration-number">01</span>
-        <div className="decoration-line"></div>
-
-        <div className="decoration-vertical">
-          HMTI RISTEK
-        </div>
-      </div>
-
-
-      <div className="contact-decoration contact-decoration-right">
-        <div className="decoration-vertical">
-          INFORMATICS
-        </div>
-
-        <div className="decoration-line"></div>
-
-        <span className="decoration-number">
-          2026
-        </span>
-      </div>
-
-
-      {/* DOTS */}
-      <div className="contact-dot dot-1"></div>
-      <div className="contact-dot dot-2"></div>
-      <div className="contact-dot dot-3"></div>
-      <div className="contact-dot dot-4"></div>
-
-
-      {/* =========================
-          MAIN CONTACT
-      ========================= */}
-
       <div className="contact-content">
-
-        {/* LEFT */}
+        
+        {/* SISI KIRI: JUDUL BESAR "LET'S CONNECT" */}
         <div className="contact-title">
-
-          <span>
-            HIMPUNAN MAHASISWA TEKNIK INFORMATIKA
-          </span>
-
-          <h2>
-            LET'S
-            <br />
-            <span>CONNECT.</span>
-          </h2>
-
+          <span>HIMPUNAN MAHASISWA TEKNIK INFORMATIKA</span>
+          <h2>LET'S<br /><span>CONNECT.</span></h2>
         </div>
 
-
-        {/* RIGHT */}
+        {/* SISI KANAN: TEKS, NAVIGATION BERJEJER, CONNECT US, & SUBSCRIBE */}
         <div className="contact-info">
-
           <p>
-            Punya pertanyaan, ingin berkolaborasi,
-            atau ingin mengetahui lebih jauh tentang
+            Punya pertanyaan, ingin berkolaborasi, atau ingin mengetahui lebih jauh tentang
             HMTI? Mari terhubung bersama kami.
           </p>
 
-
           {/* NAVIGATION */}
           <div className="contact-navigation">
-
-            <span className="contact-label">
-              NAVIGATION
-            </span>
-
+            <span className="contact-label">NAVIGATION</span>
             <div className="contact-nav-links">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#events">Events</a>
+              <a href="/">Home</a>
+              <a href="/hmti">About</a>
+              <a href="/divisions">Member</a>
+              <a href="#studyclub">StudyClub</a>
+              <a href="#proker">Proker</a>
+              <a href="/aspirasi">Aspirasi</a>
             </div>
-
           </div>
 
-
-          {/* CONNECT */}
+          {/* CONNECT WITH US */}
           <div className="contact-links">
+            <span className="contact-label">CONNECT WITH US</span>
 
-            <span className="contact-label">
-              CONNECT WITH US
-            </span>
-
-
-            <a
-              href="https://www.instagram.com/hmtiftsump/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-link"
-            >
+            <a href="https://instagram.com/hmtiftsump" target="_blank" rel="noreferrer" className="contact-link">
               <span>INSTAGRAM</span>
               <strong>@HMTIFTSUMP</strong>
             </a>
 
-
-            <a
-              href="mailto:hmti@ump.ac.id"
-              className="contact-link"
-            >
-              <span>EMAIL</span>
-              <strong>HMTI@UMP.AC.ID</strong>
+            <a href="https://www.youtube.com/@hmtiftsump1490" target="_blank" rel="noreferrer" className="contact-link">
+              <span>YOUTUBE</span>
+              <strong>HMTI FTS UMP</strong>
             </a>
 
+            <a href="mailto:hmtiump@gmail.com" className="contact-link">
+              <span>EMAIL</span>
+              <strong>HMTIUMP@GMAIL.COM</strong>
+            </a>
 
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=Universitas+Muhammadiyah+Purwokerto"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-link"
-            >
+            <a href="https://maps.google.com" target="_blank" rel="noreferrer" className="contact-link">
               <span>CAMPUS</span>
               <strong>UMP • PURWOKERTO</strong>
             </a>
+          </div>
 
+          {/* SUBSCRIBE FOR NEWS */}
+          <div className="contact-subscribe-box" style={{ marginTop: '35px' }}>
+            <span className="contact-label">SUBSCRIBE FOR NEWS</span>
+            <form className="subscribe-form" onSubmit={(e) => e.preventDefault()}>
+              <input type="email" placeholder="Enter your email.." required />
+              <button type="submit">SUBSCRIBE</button>
+            </form>
           </div>
 
         </div>
 
       </div>
 
-
-      {/* =========================
-          MOVING TEXT
-          HARUS DI ATAS BOTTOM
-      ========================= */}
-
-      <div className="contact-marquee">
-
-        <div className="contact-marquee-track">
-
-          <span>SMART</span>
-          <i>•</i>
-
-          <span>CREATIVE</span>
-          <i>•</i>
-
-          <span>PROGRESSIVE</span>
-          <i>•</i>
-
-          <span>SMART</span>
-          <i>•</i>
-
-          <span>CREATIVE</span>
-          <i>•</i>
-
-          <span>PROGRESSIVE</span>
-          <i>•</i>
-
-        </div>
-
-      </div>
-
-
-      {/* =========================
-          BOTTOM BAR
-          ADA DI BAWAH MARQUEE
-      ========================= */}
-
+      {/* FOOTER PALING BAWAH */}
       <div className="contact-bottom">
-
-        {/* LOGO */}
         <div className="contact-brand">
-
-          <img
-            src={tiLogo}
-            alt="Teknik Informatika"
-          />
-
+          <img src={logoUmp} alt="Logo UMP" />
           <div>
-            <strong>
-              Teknik Informatika
-            </strong>
-
-            <span>
-              Universitas Muhammadiyah Purwokerto
-            </span>
+            <strong>Universitas Muhammadiyah Purwokerto</strong>
+            <span>Teknik Informatika</span>
           </div>
-
         </div>
 
-
-        {/* COPYRIGHT */}
         <div className="contact-copyright">
-          © 2026 HMTI Teknik Informatika
+          © 2026 HMTI UMP. All rights reserved.
         </div>
 
-
-        {/* BACK TO TOP */}
-        <button
-          className="back-top"
-          onClick={() => {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }}
-        >
-          BACK TO TOP
-          <span>↑</span>
+        <button className="back-top" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          BACK TO TOP <span>↑</span>
         </button>
-
       </div>
 
     </section>
   );
 }
 
-export default Contact; 
+export default Contact;
