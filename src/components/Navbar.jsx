@@ -1,4 +1,4 @@
-import React from 'react';
+
 import logoUmp from "../assets/logo-ump.png";
 import logoIf from "../assets/logo-hmti.png";
 import "../styles/navbar.css";
@@ -33,11 +33,10 @@ function Navbar() {
       {/* MENU KANAN */}
       <div className="nav-links">
         <a href="/">Home</a>
-        <a href="/hmti">About</a>
-        <a href="/divisions">Member</a>
-        <a href="#studyclub">StudyClub</a>
-        <a href="#proker">Proker</a>
-        <a href="/aspirasi">Aspirasi</a>
+        <a href="/">Aspirasi</a>
+        <a href="/hmti">HMTI</a>
+        <a href="/divisions">Divisi</a>
+        
       </div>
     </nav>
   );

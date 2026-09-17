@@ -1,0 +1,771 @@
+/* ========================================
+   ASPIRASI PAGE
+======================================== */
+
+.aspirasi-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(37, 99, 235, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 60%,
+      rgba(22, 131, 255, 0.08),
+      transparent 35%
+    ),
+    #050816;
+
+  color: white;
+}
+
+
+/* ========================================
+   GLOW
+======================================== */
+
+.aspirasi-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  filter: blur(140px);
+
+  pointer-events: none;
+
+  opacity: 0.4;
+
+  z-index: 0;
+}
+
+.glow-one {
+  top: 50px;
+  left: -250px;
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.glow-two {
+  right: -250px;
+  bottom: 100px;
+  background: rgba(22, 131, 255, 0.1);
+}
+
+
+/* ========================================
+   TOP BAR
+======================================== */
+
+.aspirasi-topbar {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  height: 80px;
+
+  padding: 0 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  background: rgba(5, 8, 22, 0.65);
+
+  backdrop-filter: blur(15px);
+}
+
+
+.aspirasi-back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #94a3b8;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s ease;
+}
+
+
+.aspirasi-back span {
+  color: #60a5fa;
+  font-size: 18px;
+}
+
+
+.aspirasi-back:hover {
+  color: white;
+  transform: translateX(-4px);
+}
+
+
+.aspirasi-top-title {
+  color: white;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+.aspirasi-main {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding: 110px 0 130px;
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.aspirasi-heading {
+  width: 100%;
+
+  margin-bottom: 70px;
+}
+
+
+.aspirasi-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #60a5fa;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+}
+
+
+.aspirasi-heading h1 {
+  margin: 0;
+
+  font-size: clamp(55px, 7vw, 105px);
+
+  line-height: 0.9;
+
+  letter-spacing: -5px;
+
+  font-weight: 900;
+}
+
+
+.aspirasi-heading h1 span {
+  background:
+    linear-gradient(
+      90deg,
+      #60a5fa,
+      #2563eb,
+      #93c5fd
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.aspirasi-heading p {
+  max-width: 600px;
+
+  margin-top: 30px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   FORM CARD
+======================================== */
+
+.aspirasi-card {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 55px 6%;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.9),
+      rgba(5, 11, 24, 0.9)
+    );
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(20px);
+}
+
+
+/* ========================================
+   CARD HEADER
+======================================== */
+
+.aspirasi-card-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 35px;
+
+  margin-bottom: 35px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+.aspirasi-card-header > div:first-child > span {
+  color: #475569;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+
+.aspirasi-card-header h2 {
+  margin: 12px 0 0;
+
+  color: white;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+.aspirasi-number {
+  color: #2563eb;
+
+  font-size: 40px;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  opacity: 0.7;
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+.aspirasi-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+}
+
+
+.aspirasi-form-row {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+}
+
+
+.aspirasi-field {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.aspirasi-field label {
+  color: #94a3b8;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.aspirasi-field input,
+.aspirasi-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 17px 18px;
+
+  background: rgba(2, 6, 23, 0.7);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition:
+    border 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.aspirasi-field input {
+  height: 55px;
+}
+
+
+.aspirasi-field textarea {
+  min-height: 230px;
+
+  resize: vertical;
+
+  line-height: 1.7;
+}
+
+
+.aspirasi-field input::placeholder,
+.aspirasi-field textarea::placeholder {
+  color: #334155;
+}
+
+
+.aspirasi-field input:focus,
+.aspirasi-field textarea:focus {
+  border-color: #1683ff;
+
+  background: rgba(5, 11, 30, 0.9);
+
+  box-shadow:
+    0 0 0 3px rgba(22, 131, 255, 0.08),
+    0 0 25px rgba(22, 131, 255, 0.08);
+}
+
+
+/* ========================================
+   FORM BOTTOM
+======================================== */
+
+.aspirasi-form-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding-top: 10px;
+}
+
+
+.aspirasi-form-bottom p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.aspirasi-submit {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  min-width: 210px;
+
+  padding: 17px 25px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #1683ff;
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.aspirasi-submit span {
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.aspirasi-submit:hover {
+  background: #2563eb;
+
+  box-shadow:
+    0 10px 30px rgba(22, 131, 255, 0.3);
+
+  transform: translateY(-2px);
+}
+
+
+.aspirasi-submit:hover span {
+  transform: translateX(6px);
+}
+
+
+.aspirasi-submit:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.aspirasi-status {
+  padding: 14px 18px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+.aspirasi-status.success {
+  background: rgba(34, 197, 94, 0.08);
+
+  border: 1px solid rgba(34, 197, 94, 0.2);
+
+  color: #4ade80;
+}
+
+
+.aspirasi-status.error {
+  background: rgba(239, 68, 68, 0.08);
+
+  border: 1px solid rgba(239, 68, 68, 0.2);
+
+  color: #f87171;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.aspirasi-footer {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+
+  min-height: 100px;
+
+  box-sizing: border-box;
+
+  padding: 25px 5%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  background: rgba(2, 6, 18, 0.8);
+}
+
+
+/* ========================================
+   FOOTER BRAND
+======================================== */
+
+.aspirasi-footer-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+.aspirasi-footer-logos {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+
+.aspirasi-footer-logos img {
+  width: 38px;
+
+  height: 38px;
+
+  object-fit: contain;
+}
+
+
+.aspirasi-footer-divider {
+  width: 1px;
+
+  height: 30px;
+
+  background: rgba(255, 255, 255, 0.15);
+}
+
+
+.aspirasi-footer-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+.aspirasi-footer-text strong {
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+.aspirasi-footer-text span {
+  color: #475569;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   COPYRIGHT
+======================================== */
+
+.aspirasi-footer-copy {
+  color: #475569;
+
+  font-size: 9px;
+
+  letter-spacing: 0.5px;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+  .aspirasi-main {
+    width: 92%;
+
+    padding-top: 80px;
+  }
+
+
+  .aspirasi-heading h1 {
+    font-size: clamp(48px, 12vw, 80px);
+
+    letter-spacing: -3px;
+  }
+
+
+  .aspirasi-card {
+    padding: 40px 5%;
+  }
+
+
+  .aspirasi-form-row {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+
+  .aspirasi-form-bottom {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  .aspirasi-submit {
+    width: 100%;
+  }
+
+
+  .aspirasi-footer {
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px 20px;
+  }
+
+
+  .aspirasi-footer-brand {
+    flex-direction: column;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .aspirasi-topbar {
+    height: 70px;
+
+    padding: 0 20px;
+  }
+
+
+  .aspirasi-top-title {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .aspirasi-back {
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .aspirasi-main {
+    width: 94%;
+
+    padding: 65px 0 80px;
+  }
+
+
+  .aspirasi-heading {
+    margin-bottom: 45px;
+  }
+
+
+  .aspirasi-heading p {
+    font-size: 12px;
+  }
+
+
+  .aspirasi-card {
+    padding: 30px 20px;
+  }
+
+
+  .aspirasi-card-header h2 {
+    font-size: 20px;
+  }
+
+
+  .aspirasi-number {
+    font-size: 28px;
+  }
+
+
+  .aspirasi-footer-logos img {
+    width: 32px;
+
+    height: 32px;
+  }
+
+}

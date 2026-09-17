@@ -240,3 +240,1268 @@
     margin-bottom: 20px;
   }
 }
+
+/* =========================
+   VISI & MISI
+========================= */
+
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.vision-block {
+  padding-left: 20px;
+  border-left: 2px solid rgba(59, 130, 246, 0.5);
+}
+
+.vision-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #60a5fa;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.vision-block p {
+  max-width: 700px;
+  margin: 0 0 12px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.vision-block p:last-child {
+  margin-bottom: 0;
+}
+/* =========================================================
+   HMTI PAGE
+========================================================= */
+
+.hmti-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 6% 100px;
+  background: #050816;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACK TO HOME
+========================================================= */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 80px;
+
+  background: transparent;
+  border: none;
+
+  color: #64748b;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  color: #ffffff;
+  transform: translateX(-5px);
+}
+
+
+/* =========================================================
+   HMTI HEADER
+========================================================= */
+
+.hmti-header {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 90px;
+}
+
+
+/* TITLE */
+
+.hmti-title {
+  position: relative;
+}
+
+.hmti-mini {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #60a5fa;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.hmti-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(65px, 8vw, 120px);
+
+  line-height: 0.85;
+
+  font-weight: 900;
+
+  letter-spacing: -7px;
+}
+
+.hmti-title h2 span {
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #2563eb,
+    #93c5fd
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* DESCRIPTION */
+
+.hmti-description {
+  max-width: 620px;
+}
+
+.hmti-description p {
+  margin: 0 0 20px;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.hmti-description p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   VISI & MISI
+========================================================= */
+
+.hmti-visimisi {
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 45px 32px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.8),
+      rgba(5, 11, 24, 0.9)
+    );
+
+  border: 1px solid rgba(148, 163, 184, 0.25);
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  backdrop-filter: blur(15px);
+}
+
+
+/* GLOW */
+
+.hmti-visimisi::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  left: -180px;
+  top: -180px;
+
+  background: rgba(37, 99, 235, 0.12);
+
+  filter: blur(100px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* GARIS TENGAH */
+
+.hmti-visimisi::after {
+  content: "";
+
+  position: absolute;
+
+  top: 35px;
+  bottom: 35px;
+
+  left: 50%;
+
+  width: 1px;
+
+  background: rgba(148, 163, 184, 0.14);
+}
+
+
+/* COLUMN */
+
+.visimisi-column {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 0;
+}
+
+
+/* NOMOR */
+
+.visimisi-number {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #475569;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* JUDUL */
+
+.visimisi-column h3 {
+  margin: 0 0 18px;
+
+  color: #3b82f6;
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* VISI TEXT */
+
+.visimisi-column p {
+  margin: 0;
+
+  max-width: 590px;
+
+  color: #9aa6b8;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  font-weight: 500;
+}
+
+
+/* MISI LIST */
+
+.visimisi-column ul {
+  margin: 0;
+
+  padding-left: 20px;
+
+  max-width: 650px;
+}
+
+.visimisi-column li {
+  margin-bottom: 14px;
+
+  padding-left: 4px;
+
+  color: #9aa6b8;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+
+  font-weight: 500;
+}
+
+.visimisi-column li:last-child {
+  margin-bottom: 0;
+}
+
+
+/* BULLET */
+
+.visimisi-column li::marker {
+  color: #2563eb;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   BPH SECTION
+========================================================= */
+
+.bph-section {
+  position: relative;
+
+  padding: 120px 6% 100px;
+
+  background: #050b18;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* BACKGROUND GLOW */
+
+.bph-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -250px;
+  top: 100px;
+
+  background: rgba(37, 99, 235, 0.08);
+
+  filter: blur(130px);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BPH HEADER
+========================================================= */
+
+.bph-header {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 70px;
+}
+
+.about-mini {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #60a5fa;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.bph-header h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(65px, 8vw, 110px);
+
+  line-height: 0.85;
+
+  font-weight: 900;
+
+  letter-spacing: -6px;
+}
+
+.bph-header h2 span {
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #2563eb
+  );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.bph-header > p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   BPH GRID
+========================================================= */
+
+.bph-grid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   BPH CARD
+========================================================= */
+
+.bph-card {
+  position: relative;
+
+  background: rgba(15, 23, 42, 0.55);
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.bph-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(59, 130, 246, 0.35);
+
+  background: rgba(15, 23, 42, 0.85);
+}
+
+
+/* =========================================================
+   BPH PHOTO
+========================================================= */
+
+.bph-photo {
+  position: relative;
+
+  width: 100%;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  background: #0b1120;
+}
+
+.bph-photo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  filter: grayscale(20%);
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+.bph-card:hover .bph-photo img {
+  transform: scale(1.04);
+
+  filter: grayscale(0%);
+}
+
+
+/* NUMBER */
+
+.bph-number {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  padding: 7px 9px;
+
+  background: rgba(5, 8, 22, 0.75);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 6px;
+
+  color: #60a5fa;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   BPH INFO
+========================================================= */
+
+.bph-info {
+  padding: 22px 22px 25px;
+}
+
+.bph-info > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #3b82f6;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.bph-info h3 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+.bph-info p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   DIVISION SECTION
+========================================================= */
+
+.hmti-divisions-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 65px;
+
+  margin-top: 150px;
+  padding-top: 80px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   DIVISION HEADER
+========================================================= */
+
+.division-cta-content {
+  width: 100%;
+}
+
+.division-mini {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 4px;
+}
+
+
+/* =========================================================
+   DIVISION TITLE
+========================================================= */
+
+.hmti-divisions-cta h3 {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(65px, 8vw, 115px);
+  line-height: 0.78;
+
+  letter-spacing: -7px;
+
+  font-weight: 800;
+}
+
+.hmti-divisions-cta h3 span {
+  color: transparent;
+
+  -webkit-text-stroke: 1px #1683ff;
+}
+
+
+/* =========================================================
+   DIVISION DESCRIPTION
+========================================================= */
+
+.hmti-divisions-cta > .division-cta-content > p {
+  max-width: 750px;
+
+  margin: 40px 0 0;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   DIVISION LIST
+========================================================= */
+
+.division-list {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin-top: 55px;
+}
+
+
+/* =========================================================
+   DIVISION ITEM
+========================================================= */
+
+.division-item {
+  position: relative;
+
+  min-height: 145px;
+
+  padding: 25px 28px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 131, 255, 0.08),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 14px;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+
+  cursor: default;
+}
+
+/* =========================================================
+   TOP BLUE LINE
+========================================================= */
+
+.division-item::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 45px;
+  height: 2px;
+
+  background: #1683ff;
+
+  transition:
+    width 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   CORNER DETAIL
+========================================================= */
+
+.division-item::after {
+  content: "";
+
+  position: absolute;
+
+  right: -35px;
+  bottom: -35px;
+
+  width: 90px;
+  height: 90px;
+
+  border: 1px solid rgba(22, 131, 255, 0.18);
+
+  border-radius: 16px;
+
+  transform: rotate(45deg);
+
+  transition:
+    transform 0.5s ease,
+    border-color 0.4s ease;
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.division-item span {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 9px;
+  font-weight: 500;
+
+  letter-spacing: 3px;
+}
+
+
+/* BLUE DASH */
+
+.division-item span::before {
+  content: "";
+
+  width: 18px;
+  height: 1px;
+
+  background: #1683ff;
+
+  transition: width 0.3s ease;
+}
+
+
+/* =========================================================
+   DIVISION NAME
+========================================================= */
+
+.division-item strong {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  color: white;
+
+  font-size: clamp(25px, 3vw, 40px);
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.division-item:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(22, 131, 255, 0.45);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(22, 131, 255, 0.15),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.25),
+    0 0 30px rgba(22, 131, 255, 0.06);
+}
+
+
+.division-item:hover::before {
+  width: 100%;
+
+  box-shadow:
+    0 0 12px rgba(22, 131, 255, 0.7);
+}
+
+
+.division-item:hover::after {
+  transform: rotate(45deg) translate(-10px, -10px);
+
+  border-color: rgba(22, 131, 255, 0.35);
+}
+
+
+.division-item:hover span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.division-item:hover span::before {
+  width: 30px;
+}
+
+
+.division-item:hover strong {
+  transform: translateX(6px);
+
+  color: #1683ff;
+}
+
+
+/* =========================================================
+   DIVISION BUTTON
+========================================================= */
+
+.hmti-divisions-cta > .division-button {
+  justify-self: start;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  min-width: 220px;
+
+  padding: 20px 25px;
+
+  background: white;
+
+  color: #050812;
+
+  border: none;
+
+  border-radius: 50px;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.division-button strong {
+  font-size: 20px;
+
+  color: #050812;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.division-button:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(22, 131, 255, 0.2);
+}
+
+
+.division-button:hover strong {
+  color: #1683ff;
+
+  transform: translateX(5px);
+}
+
+
+.division-button:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hmti-divisions-cta {
+    margin-top: 120px;
+
+    padding-top: 60px;
+
+    gap: 55px;
+  }
+
+
+  .division-list {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+
+  .division-item {
+    min-height: 135px;
+  }
+
+
+  .division-item strong {
+    font-size: 30px;
+  }
+
+
+  .hmti-divisions-cta > .division-button {
+    justify-self: start;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hmti-divisions-cta {
+    margin-top: 100px;
+
+    padding-top: 55px;
+
+    gap: 45px;
+  }
+
+
+  .hmti-divisions-cta h3 {
+    font-size: 55px;
+
+    letter-spacing: -4px;
+  }
+
+
+  .hmti-divisions-cta > .division-cta-content > p {
+    margin-top: 30px;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+  }
+
+
+  .division-list {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 35px;
+  }
+
+
+  .division-item {
+    min-height: 120px;
+
+    padding: 22px;
+  }
+
+
+  .division-item strong {
+    font-size: 32px;
+  }
+
+
+  .division-item span {
+    font-size: 8px;
+  }
+
+
+  .hmti-divisions-cta > .division-button {
+    width: 100%;
+
+    margin-top: 5px;
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hmti-header,
+  .bph-header {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .bph-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .hmti-visimisi {
+    gap: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .hmti-section {
+    padding: 90px 5% 70px;
+  }
+
+
+  .back-button {
+    margin-bottom: 55px;
+  }
+
+
+  .hmti-title h2 {
+    font-size: 65px;
+
+    letter-spacing: -4px;
+  }
+
+
+  .hmti-header {
+    margin-bottom: 60px;
+  }
+
+
+  /* VISI MISI */
+
+  .hmti-visimisi {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 30px 22px;
+  }
+
+
+  .hmti-visimisi::after {
+    display: none;
+  }
+
+
+  .visimisi-column + .visimisi-column {
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+  }
+
+
+  .visimisi-column h3 {
+    font-size: 24px;
+  }
+
+
+  .visimisi-column p,
+  .visimisi-column li {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+
+  /* BPH */
+
+  .bph-section {
+    padding: 80px 5% 70px;
+  }
+
+
+  .bph-header {
+    margin-bottom: 50px;
+  }
+
+
+  .bph-header h2 {
+    font-size: 65px;
+
+    letter-spacing: -4px;
+  }
+
+
+  .bph-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .bph-photo {
+    height: 330px;
+  }
+
+
+  /* CTA */
+
+  .hmti-divisions-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    margin-top: 70px;
+
+    gap: 30px;
+  }
+
+
+  .division-button {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .hmti-title h2,
+  .bph-header h2 {
+    font-size: 55px;
+  }
+
+
+  .hmti-description p,
+  .bph-header > p {
+    font-size: 13px;
+  }
+
+
+  .bph-photo {
+    height: 280px;
+  }
+
+
+  .hmti-divisions-cta h3 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+}

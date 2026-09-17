@@ -1,391 +1,577 @@
-/* =========================================
+/* =========================================================
    DIVISIONS SECTION
-========================================= */
+========================================================= */
 
 .divisions-section {
   position: relative;
   min-height: 100vh;
-  padding: 130px 6%;
-
-  overflow: hidden;
-
+  padding: 90px 6%;
   background:
     radial-gradient(
-      circle at 15% 40%,
-      rgba(22, 131, 255, 0.07),
-      transparent 35%
-    );
+      circle at 10% 10%,
+      rgba(22, 131, 255, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(0, 217, 255, 0.05),
+      transparent 30%
+    ),
+    #050816;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  overflow: hidden;
 }
 
-
-/* =========================================
-   BACKGROUND TEXT
-========================================= */
+/* Ambient background */
 
 .divisions-section::before {
-  content: "HMTI";
-
+  content: "";
   position: absolute;
-  right: -70px;
-  top: 25%;
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  right: -150px;
 
-  font-size: 210px;
-  font-weight: 900;
-  letter-spacing: -15px;
+  background: radial-gradient(
+    circle,
+    rgba(22, 131, 255, 0.12),
+    transparent 70%
+  );
 
-  color: transparent;
+  filter: blur(50px);
+  pointer-events: none;
+}
 
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.025);
+.divisions-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  left: -150px;
 
+  background: radial-gradient(
+    circle,
+    rgba(0, 217, 255, 0.08),
+    transparent 70%
+  );
+
+  filter: blur(60px);
   pointer-events: none;
 }
 
 
-/* =========================================
-   SECTION HEADER
-========================================= */
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.back-hmti-button {
+  position: relative;
+  z-index: 5;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  width: fit-content;
+
+  padding: 11px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(15px);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.back-hmti-button span {
+  font-size: 17px;
+  transition: transform 0.35s ease;
+}
+
+.back-hmti-button:hover {
+  background: rgba(22, 131, 255, 0.12);
+  border-color: rgba(56, 189, 248, 0.6);
+
+  transform: translateX(-5px);
+
+  box-shadow:
+    0 10px 30px rgba(22, 131, 255, 0.12),
+    inset 0 0 20px rgba(22, 131, 255, 0.04);
+}
+
+.back-hmti-button:hover span {
+  transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .divisions-header {
   position: relative;
   z-index: 2;
 
-  display: grid;
-  grid-template-columns: 1fr 0.65fr;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 
-  gap: 80px;
-  align-items: end;
+  padding-bottom: 32px;
 
-  margin-bottom: 65px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .division-mini {
-  display: block;
+  position: relative;
 
-  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
 
-  color: #1683ff;
-  font-size: 8px;
-  letter-spacing: 3px;
+  font-size: 9px;
+  letter-spacing: 4px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  text-transform: uppercase;
+}
+
+.division-mini::before {
+  content: "";
+
+  width: 35px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #1683ff,
+    #00d9ff
+  );
+
+  box-shadow:
+    0 0 10px rgba(22, 131, 255, 0.7);
 }
 
 .divisions-header h2 {
-  margin: 0;
+  margin: 12px 0 0;
 
-  font-size: clamp(52px, 6vw, 82px);
-  line-height: 0.84;
-  letter-spacing: -6px;
+  font-size: clamp(42px, 5vw, 72px);
+
   font-weight: 800;
+
+  line-height: 0.9;
+
+  letter-spacing: -4px;
 }
 
 .divisions-header h2 span {
-  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #1683ff,
+    #00d9ff
+  );
 
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.65);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-size: 200% auto;
+
+  animation: divisionTitleShine 5s linear infinite;
 }
 
-.divisions-header > p {
-  max-width: 390px;
+@keyframes divisionTitleShine {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.divisions-header p {
+  max-width: 450px;
+
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 11px;
-  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 13px;
+  line-height: 1.8;
+
+  letter-spacing: 0.2px;
 }
 
 
-/* =========================================
-   DIVISION GRID
-========================================= */
+/* =========================================================
+   GRID
+========================================================= */
 
 .divisions-grid {
   position: relative;
   z-index: 2;
 
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 18px;
+  gap: 20px;
 }
 
 
-/* =========================================
+/* =========================================================
    DIVISION CARD
-========================================= */
+========================================================= */
 
 .division-card {
+  --accent: #1683ff;
+  --accent-soft: rgba(22, 131, 255, 0.15);
+
   position: relative;
 
-  min-height: 365px;
-  padding: 24px;
+  min-height: 390px;
+
+  padding: 25px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   overflow: hidden;
+
+  border-radius: 24px;
 
   background:
     linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.055) 0%,
-      rgba(255, 255, 255, 0.018) 45%,
-      rgba(22, 131, 255, 0.025) 100%
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.015)
     );
 
-  border: 1px solid rgba(255, 255, 255, 0.075);
-  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  backdrop-filter: blur(18px);
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.035),
-    0 10px 35px rgba(0, 0, 0, 0.12);
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 15px 45px rgba(0, 0, 0, 0.18);
 
   transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.4s ease,
-    background 0.4s ease,
-    box-shadow 0.4s ease;
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease,
+    background 0.45s ease;
+
+  isolation: isolate;
 }
 
 
-/* =========================================
-   CARD GLASS HIGHLIGHT
-========================================= */
+/* Moving ambient glow */
 
 .division-card::before {
   content: "";
 
   position: absolute;
-  inset: 0;
 
-  border-radius: 24px;
+  width: 220px;
+  height: 220px;
 
-  background:
-    linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0.08),
-      transparent 25%,
-      transparent 70%,
-      rgba(22, 131, 255, 0.05)
-    );
+  top: -100px;
+  right: -80px;
 
-  pointer-events: none;
-  opacity: 0.8;
+  border-radius: 50%;
+
+  background: var(--accent-soft);
+
+  filter: blur(45px);
+
+  opacity: 0.7;
+
+  transition:
+    transform 0.7s ease,
+    opacity 0.5s ease;
 }
 
 
-/* =========================================
-   CARD GLOW
-========================================= */
+/* Decorative diagonal */
 
 .division-card::after {
   content: "";
 
   position: absolute;
 
-  width: 240px;
-  height: 240px;
+  width: 160px;
+  height: 160px;
 
-  right: -120px;
-  bottom: -120px;
+  right: -70px;
+  bottom: -70px;
 
-  border-radius: 50%;
+  border-radius: 35px;
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(22, 131, 255, 0.16),
-      transparent 70%
-    );
+  border: 1px solid var(--accent);
 
-  filter: blur(40px);
+  opacity: 0.06;
 
-  opacity: 0.6;
+  transform: rotate(45deg);
 
   transition:
     transform 0.6s ease,
-    opacity 0.6s ease;
+    opacity 0.5s ease;
 }
 
-
-/* =========================================
-   CARD HOVER
-========================================= */
-
 .division-card:hover {
-  transform: translateY(-10px) scale(1.015);
+  transform: translateY(-9px);
 
-  border-color: rgba(22, 131, 255, 0.32);
+  border-color: var(--accent);
 
   background:
     linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.065),
-      rgba(22, 131, 255, 0.045)
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.018)
     );
 
   box-shadow:
-    0 24px 55px rgba(0, 0, 0, 0.3),
-    0 0 45px rgba(22, 131, 255, 0.07),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 0 35px var(--accent-soft),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
-.division-card:hover::after {
-  transform: scale(1.45);
+
+.division-card:hover::before {
+  transform: scale(1.5);
   opacity: 1;
 }
 
-
-/* =========================================
-   TOP
-========================================= */
-
-.division-top {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  justify-content: space-between;
-
-  color: rgba(255, 255, 255, 0.24);
-
-  font-size: 7px;
-  letter-spacing: 1.8px;
+.division-card:hover::after {
+  transform: rotate(65deg) scale(1.15);
+  opacity: 0.14;
 }
 
 
-/* =========================================
-   SYMBOL
-========================================= */
+/* =========================================================
+   CARD TOP
+========================================================= */
 
-.division-symbol {
-  position: absolute;
+.division-top {
+  position: relative;
+  z-index: 3;
 
-  top: 58px;
-  left: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  width: 48px;
-  height: 48px;
+.division-top span:first-child {
+  font-size: 13px;
+  font-weight: 800;
+
+  color: var(--accent);
+
+  letter-spacing: 1px;
+}
+
+.division-top span:last-child {
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  border: 1px solid var(--accent);
+
+  color: var(--accent);
+
+  background: var(--accent-soft);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   LOGO DIVISI
+========================================================= */
+
+.division-symbol-img {
+  position: relative;
+  z-index: 3;
+
+  width: 82px;
+  height: 82px;
+
+  margin: 22px 0 18px;
+
+  padding: 15px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border: 1px solid rgba(22, 131, 255, 0.28);
-  border-radius: 14px;
+  border-radius: 20px;
 
   background:
-    linear-gradient(
-      145deg,
-      rgba(22, 131, 255, 0.08),
-      rgba(255, 255, 255, 0.02)
-    );
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.12),
+      transparent 55%
+    ),
+    var(--accent-soft);
 
-  color: #1683ff;
-  font-size: 17px;
+  border: 1px solid var(--accent);
 
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 0 24px rgba(22, 131, 255, 0.06);
+    0 0 25px var(--accent-soft),
+    inset 0 0 25px rgba(255, 255, 255, 0.025);
 
   transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.45s ease,
+    background 0.45s ease;
 }
 
-.division-card:hover .division-symbol {
-  transform: rotate(-4deg) scale(1.06);
+.division-symbol-img::before {
+  content: "";
 
-  border-color: rgba(22, 131, 255, 0.5);
+  position: absolute;
+  inset: 5px;
+
+  border-radius: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  pointer-events: none;
+}
+
+.division-symbol-img img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 8px var(--accent));
+
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.division-card:hover .division-symbol-img {
+  transform: translateY(-5px) rotate(-2deg);
 
   box-shadow:
-    0 0 30px rgba(22, 131, 255, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    0 0 35px var(--accent-soft),
+    0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.division-card:hover .division-symbol-img img {
+  transform: scale(1.08);
+
+  filter:
+    drop-shadow(0 0 15px var(--accent));
 }
 
 
-/* =========================================
+/* =========================================================
    CONTENT
-========================================= */
+========================================================= */
 
 .division-content {
   position: relative;
-  z-index: 2;
-
-  margin-top: 72px;
+  z-index: 3;
 }
 
 .division-content h3 {
-  margin: 0 0 7px;
+  margin: 0 0 5px;
 
-  font-size: 32px;
+  font-size: 25px;
+
+  font-weight: 800;
+
   letter-spacing: -0.8px;
-  line-height: 1;
 }
 
 .division-full {
   display: block;
 
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
-  color: #1683ff;
+  font-size: 8px;
 
-  font-size: 6px;
+  font-weight: 700;
+
   letter-spacing: 1.8px;
+
+  color: var(--accent);
+
+  text-transform: uppercase;
 }
 
 .division-content p {
-  max-width: 260px;
-  margin: 0;
+  margin: 0 0 20px;
 
-  color: rgba(255, 255, 255, 0.36);
+  max-width: 95%;
 
-  font-size: 9px;
-  line-height: 1.8;
+  font-size: 11.5px;
+
+  line-height: 1.65;
+
+  color: rgba(255, 255, 255, 0.58);
 }
 
 
-/* =========================================
-   MINI PROGRAM PREVIEW
-========================================= */
+/* =========================================================
+   MINI PROGRAM CARDS
+========================================================= */
 
 .division-mini-programs {
-  display: flex;
-  align-items: center;
+  display: grid;
 
-  gap: 7px;
-  margin-top: 18px;
+  grid-template-columns: repeat(3, 1fr);
 
-  flex-wrap: nowrap;
+  gap: 8px;
+
+  margin-bottom: 18px;
 }
 
 .division-mini-program {
   position: relative;
 
+  padding: 10px 9px;
+
+  min-height: 48px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  gap: 4px;
+  border-radius: 12px;
 
-  width: fit-content;
-  min-width: 0;
+  background: rgba(255, 255, 255, 0.025);
 
-  padding: 9px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.035),
-      rgba(22, 131, 255, 0.025)
-    );
-
-  border: 1px solid rgba(22, 131, 255, 0.16);
-  border-radius: 10px;
-
-  white-space: nowrap;
-  flex: 0 0 auto;
+  overflow: hidden;
 
   transition:
     transform 0.3s ease,
@@ -393,209 +579,301 @@
     background 0.3s ease;
 }
 
+.division-mini-program::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background: var(--accent);
+
+  transform: scaleY(0);
+
+  transform-origin: bottom;
+
+  transition: transform 0.3s ease;
+}
+
 .division-mini-program:hover {
   transform: translateY(-3px);
 
-  border-color: rgba(22, 131, 255, 0.35);
+  background: var(--accent-soft);
 
-  background: rgba(22, 131, 255, 0.06);
+  border-color: var(--accent);
+}
+
+.division-mini-program:hover::before {
+  transform: scaleY(1);
 }
 
 .division-mini-program span {
-  color: #ffffff;
+  font-size: 9px;
 
-  font-size: 7px;
-  line-height: 1;
-  letter-spacing: 0.4px;
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .division-mini-program small {
-  color: #1683ff;
+  margin-top: 3px;
 
-  font-size: 5px;
-  line-height: 1;
-  letter-spacing: 1.2px;
+  font-size: 6.5px;
+
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.35);
 }
 
 
-/* =========================================
-   DIVISION ACCENTS
-========================================= */
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.division-explore-btn {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    color 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.division-explore-btn::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent-soft),
+    transparent
+  );
+
+  transform: translateX(-100%);
+
+  transition: transform 0.6s ease;
+}
+
+.division-explore-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.division-explore-btn svg {
+  position: relative;
+  z-index: 2;
+
+  transition: transform 0.35s ease;
+}
+
+.division-explore-btn:hover {
+  color: white;
+
+  background: var(--accent-soft);
+
+  border-color: var(--accent);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px var(--accent-soft);
+}
+
+.division-explore-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.division-explore-btn:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.division-bottom {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 14px;
+
+  padding-top: 12px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   DIFFERENT DIVISION COLORS
+========================================================= */
 
 /* PSDM */
 
 .psdm-card {
-  border-color: rgba(167, 139, 250, 0.16);
-}
-
-.psdm-card:hover {
-  border-color: rgba(167, 139, 250, 0.35);
-}
-
-.psdm-card .division-mini-program {
-  border-color: rgba(167, 139, 250, 0.17);
-}
-
-.psdm-card .division-mini-program small {
-  color: #a78bfa;
+  --accent: #1683ff;
+  --accent-soft: rgba(22, 131, 255, 0.16);
 }
 
 
 /* EKRAF */
 
 .ekraf-card {
-  border-color: rgba(74, 222, 128, 0.16);
-}
-
-.ekraf-card:hover {
-  border-color: rgba(74, 222, 128, 0.35);
-}
-
-.ekraf-card .division-mini-program {
-  border-color: rgba(74, 222, 128, 0.17);
-}
-
-.ekraf-card .division-mini-program small {
-  color: #4ade80;
+  --accent: #f59e0b;
+  --accent-soft: rgba(245, 158, 11, 0.15);
 }
 
 
 /* ADVOKASI */
 
 .advokasi-card {
-  border-color: rgba(251, 146, 60, 0.16);
-}
-
-.advokasi-card:hover {
-  border-color: rgba(251, 146, 60, 0.35);
-}
-
-.advokasi-card .division-mini-program {
-  border-color: rgba(251, 146, 60, 0.17);
-}
-
-.advokasi-card .division-mini-program small {
-  color: #fb923c;
+  --accent: #ff3d81;
+  --accent-soft: rgba(255, 61, 129, 0.15);
 }
 
 
 /* KOMINFO */
 
 .kominfo-card {
-  border-color: rgba(192, 132, 252, 0.16);
-}
-
-.kominfo-card:hover {
-  border-color: rgba(192, 132, 252, 0.35);
-}
-
-.kominfo-card .division-mini-program {
-  border-color: rgba(192, 132, 252, 0.17);
-}
-
-.kominfo-card .division-mini-program small {
-  color: #c084fc;
+  --accent: #00d9ff;
+  --accent-soft: rgba(0, 217, 255, 0.15);
 }
 
 
 /* HUMAS */
 
 .humas-card {
-  border-color: rgba(34, 211, 238, 0.16);
-}
-
-.humas-card:hover {
-  border-color: rgba(34, 211, 238, 0.35);
-}
-
-.humas-card .division-mini-program {
-  border-color: rgba(34, 211, 238, 0.17);
-}
-
-.humas-card .division-mini-program small {
-  color: #22d3ee;
+  --accent: #a855f7;
+  --accent-soft: rgba(168, 85, 247, 0.15);
 }
 
 
 /* RISTEK */
 
 .ristek-card {
-  border-color: rgba(22, 131, 255, 0.18);
-}
-
-.ristek-card:hover {
-  border-color: rgba(22, 131, 255, 0.4);
-}
-
-.ristek-card .division-mini-program {
-  border-color: rgba(22, 131, 255, 0.20);
-}
-
-.ristek-card .division-mini-program small {
-  color: #1683ff;
+  --accent: #22c55e;
+  --accent-soft: rgba(34, 197, 94, 0.15);
 }
 
 
-/* =========================================
-   BOTTOM
-========================================= */
+/* =========================================================
+   FEATURED CARD
+========================================================= */
 
-.division-bottom {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  color: rgba(255, 255, 255, 0.2);
-
-  font-size: 7px;
-  letter-spacing: 1.8px;
+.division-featured {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22, 131, 255, 0.08),
+      rgba(255, 255, 255, 0.015)
+    );
 }
 
-.division-bottom span:last-child {
-  color: rgba(255, 255, 255, 0.15);
-
-  font-size: 6px;
-  letter-spacing: 1px;
+.division-featured::before {
+  width: 280px;
+  height: 280px;
 }
 
 
-/* =========================================
-   DIVISION FOOTER
-========================================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .division-footer {
   position: relative;
   z-index: 2;
 
-  margin-top: 55px;
-
   display: flex;
   align-items: center;
 
   gap: 25px;
+
+  padding-top: 28px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .division-counter {
   display: flex;
   align-items: center;
 
-  gap: 12px;
+  gap: 14px;
+
+  flex-shrink: 0;
 }
 
 .division-counter strong {
-  color: #1683ff;
-  font-size: 22px;
+  font-size: 38px;
+
+  font-weight: 800;
+
+  color: #38bdf8;
+
+  line-height: 1;
+
+  text-shadow:
+    0 0 25px rgba(56, 189, 248, 0.35);
 }
 
 .division-counter span {
-  color: rgba(255, 255, 255, 0.25);
+  font-size: 7px;
 
-  font-size: 6px;
-  line-height: 1.6;
-  letter-spacing: 1.5px;
+  line-height: 1.5;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .division-footer-line {
@@ -603,46 +881,93 @@
 
   height: 1px;
 
-  background:
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.12),
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(22, 131, 255, 0.35),
+    transparent
+  );
 }
 
 .division-footer-text {
-  color: rgba(255, 255, 255, 0.2);
+  font-size: 8px;
 
-  font-size: 7px;
-  letter-spacing: 1.5px;
+  letter-spacing: 2.5px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  white-space: nowrap;
 }
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* =========================================================
+   CARD ENTRANCE
+========================================================= */
 
-@media (max-width: 1000px) {
-  .divisions-header {
-    grid-template-columns: 1fr;
-    gap: 30px;
+.division-card {
+  animation: divisionCardFloat 6s ease-in-out infinite;
+}
+
+.division-card:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.division-card:nth-child(3) {
+  animation-delay: -2s;
+}
+
+.division-card:nth-child(4) {
+  animation-delay: -3s;
+}
+
+.division-card:nth-child(5) {
+  animation-delay: -4s;
+}
+
+.division-card:nth-child(6) {
+  animation-delay: -5s;
+}
+
+@keyframes divisionCardFloat {
+  0%,
+  100% {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 15px 45px rgba(0, 0, 0, 0.18);
   }
 
+  50% {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.07),
+      0 18px 50px rgba(0, 0, 0, 0.22);
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
   .divisions-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .divisions-section {
-    padding: 90px 20px;
+    padding: 70px 5%;
+    gap: 35px;
   }
 
-  .divisions-header h2 {
-    font-size: 52px;
-    letter-spacing: -4px;
+  .divisions-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .divisions-header p {
+    max-width: 600px;
   }
 
   .divisions-grid {
@@ -650,97 +975,54 @@
   }
 
   .division-card {
-    min-height: 340px;
-    padding: 22px;
-
-    border-radius: 22px;
-  }
-
-  .division-card::before {
-    border-radius: 22px;
-  }
-
-  .division-symbol {
-    top: 55px;
-    left: 22px;
-
-    width: 45px;
-    height: 45px;
-
-    font-size: 16px;
-  }
-
-  .division-content {
-    margin-top: 68px;
-  }
-
-  .division-content h3 {
-    font-size: 30px;
-  }
-
-  .division-mini-programs {
-    gap: 5px;
-    flex-wrap: wrap;
-  }
-
-  .division-mini-program {
-    padding: 7px 8px;
-  }
-
-  .division-mini-program span {
-    font-size: 6px;
-  }
-
-  .division-mini-program small {
-    font-size: 4.5px;
+    min-height: 370px;
   }
 
   .division-footer {
-    flex-direction: column;
     align-items: flex-start;
-
-    gap: 20px;
+    flex-direction: column;
   }
 
   .division-footer-line {
     width: 100%;
+    flex: none;
+  }
+
+  .division-footer-text {
+    white-space: normal;
   }
 }
 
-.back-hmti-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+@media (max-width: 500px) {
+  .divisions-section {
+    padding: 60px 20px;
+  }
 
-  margin-bottom: 50px;
+  .divisions-header h2 {
+    font-size: 48px;
+    letter-spacing: -3px;
+  }
 
-  padding: 0;
+  .division-card {
+    padding: 20px;
 
-  background: transparent;
-  border: none;
+    border-radius: 20px;
+  }
 
-  color: rgba(255, 255, 255, 0.55);
+  .division-symbol-img {
+    width: 72px;
+    height: 72px;
+  }
 
-  font-family: inherit;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  .division-mini-programs {
+    gap: 6px;
+  }
 
-  cursor: pointer;
+  .division-mini-program {
+    padding: 9px 7px;
+  }
 
-  transition: color 0.3s ease;
-}
-
-.back-hmti-button span {
-  font-size: 20px;
-
-  transition: transform 0.3s ease;
-}
-
-.back-hmti-button:hover {
-  color: white;
-}
-
-.back-hmti-button:hover span {
-  transform: translateX(-6px);
+  .division-content p {
+    font-size: 11px;
+  }
 }

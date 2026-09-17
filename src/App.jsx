@@ -2,18 +2,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import AboutInformatics from "./components/AboutInformatics";
 import Divisions from "./components/Divisions";
 import Contact from "./components/Contact";
 import Events from "./components/Events";
 import AboutHmti from "./components/AboutHmti";
-import AspirasiPage from "./components/AspirasiPage";
+import Aspirasi from "./components/Aspirasi";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         {/* ================= HOME ================= */}
         <Route
           path="/"
@@ -21,26 +19,51 @@ function App() {
             <>
               <Navbar />
               <Hero />
-              <AboutInformatics />
+              <AboutHmti />
               <Events />
               <Contact />
+              <Aspirasi />
+              
             </>
           }
         />
 
-        {/* ================= HMTI PAGE ================= */}
+        {/* ================= HMTI ================= */}
         <Route
           path="/hmti"
-          element={<AboutHmti />}
+          element={
+            <>
+              <Navbar />
+
+              <Contact />
+              <Aspirasi />
+            </>
+          }
         />
 
+        {/* ================= DIVISIONS ================= */}
         <Route
           path="/divisions"
-          element={<Divisions />}
+          element={
+            <>
+              <Navbar />
+              <Divisions />
+            </>
+          }
         />
-      </Routes>
 
-      
+        {/* ================= EVENTS ================= */}
+        <Route
+          path="/events"
+          element={
+            <>
+              <Navbar />
+            </>
+          }
+        />
+
+        {/* ================= ASPIRASI ================= */}
+      </Routes>
     </BrowserRouter>
   );
 }
