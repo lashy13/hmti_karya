@@ -1,14 +1,15 @@
 /* =========================================================
    HERO
 ========================================================= */
-
 .hero {
   position: relative;
-  min-height: calc(100vh - 90px);
-  padding: 0 6%;
+  min-height: 100vh;
+  padding: 90px 6% 60px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   overflow: hidden;
   background: #050816;
   border: none;
@@ -239,7 +240,7 @@
 }
 
 .hero-stat + .hero-stat {
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-left:none
 }
 
 
@@ -559,12 +560,90 @@
   font-weight: 600;
 }
 
-.year strong {
-  color: white;
-  font-size: 18px;
-  letter-spacing: 2.5px;
+.year {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  width: fit-content;
+  padding: 8px 14px;
+
+  background: #0b1224;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 11px;
+
+  transform: rotate(6deg);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+
+  cursor: pointer;
 }
 
+.year:hover {
+  transform: rotate(2deg) translateY(-5px) scale(1.04);
+
+  background: #0c1833;
+  border-color: rgba(37, 99, 235, 0.8);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(37, 99, 235, 0.45),
+    0 0 30px rgba(37, 99, 235, 0.15);
+}
+
+/* LOGO */
+.year img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+
+  padding: 4px;
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.year:hover img {
+  transform: rotate(-8deg) scale(1.12);
+
+  background: rgba(37, 99, 235, 0.2);
+
+  box-shadow: 0 0 12px rgba(37, 99, 235, 0.5);
+}
+
+/* BAGIAN TEKS */
+.year div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.year strong {
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.year span {
+  color: #64748b;
+  font-size: 8px;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.year:hover strong {
+  color: #60a5fa;
+}
 
 /* =========================================================
    SCROLL INDICATOR

@@ -1,0 +1,327 @@
+/* =========================================================
+   DIVISION PAGE - GLOBAL STYLE
+========================================================= */
+
+.division-page {
+  min-height: 100vh;
+  background: #050816;
+  color: white;
+  overflow: hidden;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.division-page-hero {
+  position: relative;
+  min-height: 75vh;
+  padding: 150px 8% 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      var(--division-glow),
+      transparent 35%
+    ),
+    #050816;
+}
+
+.division-page-label,
+.division-section-label {
+  color: var(--division-color);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.division-page-hero h1 {
+  margin: 25px 0 10px;
+
+  font-size: clamp(70px, 10vw, 140px);
+  line-height: 0.85;
+  letter-spacing: -7px;
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    var(--division-color)
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.division-page-hero h2 {
+  margin: 0 0 25px;
+
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.division-page-hero p {
+  max-width: 600px;
+
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.division-page-section {
+  position: relative;
+  padding: 110px 8%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.division-page-section h2 {
+  margin: 20px 0 30px;
+
+  font-size: clamp(40px, 6vw, 70px);
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.division-page-section > p {
+  max-width: 700px;
+
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   PROKER
+========================================================= */
+
+.division-proker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+
+  margin-top: 50px;
+}
+
+.division-proker-card {
+  position: relative;
+
+  min-height: 230px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+.division-proker-card::before {
+  content: "";
+
+  position: absolute;
+  width: 180px;
+  height: 180px;
+
+  top: -90px;
+  right: -70px;
+
+  border-radius: 50%;
+
+  background: var(--division-glow);
+  filter: blur(40px);
+
+  transition: transform 0.5s ease;
+}
+
+.division-proker-card:hover {
+  transform: translateY(-7px);
+
+  border-color: var(--division-color);
+
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.division-proker-card:hover::before {
+  transform: scale(1.5);
+}
+
+.division-proker-card span {
+  position: absolute;
+  top: 22px;
+  left: 25px;
+
+  color: var(--division-color);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.division-proker-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 8px;
+
+  font-size: 24px;
+}
+
+.division-proker-card p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.division-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  margin-top: 50px;
+}
+
+.division-gallery-item {
+  height: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--division-glow),
+      rgba(255, 255, 255, 0.02)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.division-gallery-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--division-color);
+}
+
+/* =========================================================
+   MEMBERS
+========================================================= */
+
+.division-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+
+  margin-top: 50px;
+}
+
+.division-member {
+  min-height: 180px;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.5);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.division-member:hover {
+  transform: translateY(-5px);
+  border-color: var(--division-color);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .division-proker-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .division-members {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .division-page-hero {
+    padding: 120px 25px 80px;
+  }
+
+  .division-page-section {
+    padding: 80px 25px;
+  }
+
+  .division-page-hero h1 {
+    font-size: 65px;
+    letter-spacing: -4px;
+  }
+
+  .division-proker-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .division-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .division-members {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}

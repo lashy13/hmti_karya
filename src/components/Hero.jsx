@@ -2,16 +2,15 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import hmtiLogo from "../assets/hmti-logo.png";
 
+
 function Hero() {
   return (
     <section className="hero" id="home">
-
       {/* =========================
           HERO CONTENT
       ========================== */}
 
       <div className="hero-content">
-
         <motion.div
           className="eyebrow"
           initial={{ opacity: 0, y: 20 }}
@@ -21,7 +20,6 @@ function Hero() {
           <span></span>
           UNIVERSITAS MUHAMMADIYAH PURWOKERTO
         </motion.div>
-
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -37,17 +35,14 @@ function Hero() {
           <span>INFORMATIKA</span>
         </motion.h1>
 
-
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          Himpunan Mahasiswa Teknik Informatika menjadi ruang
-          untuk belajar, berkarya, berkolaborasi, dan berkembang
-          melalui teknologi.
+          Himpunan Mahasiswa Teknik Informatika menjadi ruang untuk belajar,
+          berkarya, berkolaborasi, dan berkembang melalui teknologi.
         </motion.p>
-
 
         {/* =========================
             HERO ACTIONS
@@ -59,26 +54,16 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-
-          <Link
-            to="/divisions"
-            className="hero-action primary"
-          >
+          <Link to="/divisions" className="hero-action primary">
             OUR DIVISIONS
             <span>→</span>
           </Link>
 
-
-          <Link
-            to="/prestasi"
-            className="hero-action secondary"
-          >
+          <Link to="/prestasi" className="hero-action secondary">
             PRESTASI
             <span>↗</span>
           </Link>
-
         </motion.div>
-
 
         {/* =========================
             STATS
@@ -90,28 +75,22 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
         >
-
           <div className="hero-stat">
             <strong>06</strong>
             <span>DIVISIONS</span>
           </div>
-
 
           <div className="hero-stat">
             <strong>45+</strong>
             <span>ACTIVE MEMBERS</span>
           </div>
 
-
           <div className="hero-stat">
             <strong>20+</strong>
             <span>PROGRAMS</span>
           </div>
-
         </motion.div>
-
       </div>
-
 
       {/* =========================
           LOGO SCENE
@@ -132,15 +111,11 @@ function Hero() {
           delay: 0.3,
         }}
       >
-
         {/* ROTATING TEXT */}
 
         <div className="rotating-text">
-
           <svg viewBox="0 0 500 500">
-
             <defs>
-
               <path
                 id="circlePath"
                 d="
@@ -150,21 +125,15 @@ function Hero() {
                   a 190,190 0 1,1 -380,0
                 "
               />
-
             </defs>
 
             <text>
-
               <textPath href="#circlePath">
                 TECHNOLOGY • CREATIVITY • INNOVATION • HMTI •
               </textPath>
-
             </text>
-
           </svg>
-
         </div>
-
 
         {/* RINGS */}
 
@@ -173,7 +142,6 @@ function Hero() {
         <div className="orbit orbit-one"></div>
 
         <div className="orbit orbit-two"></div>
-
 
         {/* LOGO */}
 
@@ -188,20 +156,12 @@ function Hero() {
             ease: "easeInOut",
           }}
         >
-
           <div className="logo-glow"></div>
 
           <div className="logo-card">
-
-            <img
-              src={hmtiLogo}
-              alt="Logo HMTI"
-            />
-
+            <img src={hmtiLogo} alt="Logo HMTI" />
           </div>
-
         </motion.div>
-
 
         {/* FLOATING DOTS */}
 
@@ -209,60 +169,39 @@ function Hero() {
         <div className="floating-dot dot-two"></div>
         <div className="floating-dot dot-three"></div>
 
-
         {/* CAPTION */}
 
         <div className="logo-caption">
+          <span>HIMPUNAN MAHASISWA</span>
 
-          <span>
-            HIMPUNAN MAHASISWA
-          </span>
+          <strong>TEKNIK INFORMATIKA</strong>
 
-          <strong>
-            TEKNIK INFORMATIKA
-          </strong>
-
-          <small>
-            UNIVERSITAS MUHAMMADIYAH PURWOKERTO
-          </small>
-
+          <small>UNIVERSITAS MUHAMMADIYAH PURWOKERTO</small>
         </div>
-
       </motion.div>
-
 
       {/* =========================
           HERO BOTTOM
       ========================== */}
 
       <div className="hero-bottom">
-
-        <div>
-
-          <span>01</span>
-
-          <p>
-            HIMPUNAN MAHASISWA
-            <br />
-            TEKNIK INFORMATIKA
-          </p>
-
-        </div>
-
+        <div></div>
 
         <div className="scroll-indicator">
           <div className="scroll-line"></div>
         </div>
 
-
         <div className="year">
-          <strong>2026</strong>
-        </div>
+  <img src={hmtiLogo} alt="Logo HMTI" />
 
+  <div>
+    <strong>Est. 2007</strong>
+    <span>UMP Purwokerto</span>
+  </div>
+</div>
       </div>
-
     </section>
   );
 }
 
-export default Hero;  
+export default Hero;
